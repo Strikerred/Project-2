@@ -1,17 +1,12 @@
+@import 'header';
+@import 'nav'
+
+
 $bgcolor-light: white;
 $bgcolor-dark: black;
 $textcolor-light: white;
 
-header {
-    background-color: $bgcolor-dark;
-    color: $textcolor-light;
-}
 
-header h1 {
-    padding: 10vh 10vw;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 .toggle-feed{
     display: flex;
@@ -30,26 +25,3 @@ a {
     text-decoration: none;
 }
 
-nav{
-    background-color: $bgcolor-dark;
-    padding: 10px 0;
-    margin: 0;
-}
-
-nav ul{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: inline;
-}
-
-nav a {
-    padding: 10px 5px;
-}

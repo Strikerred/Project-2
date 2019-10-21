@@ -1,0 +1,23 @@
+nav{
+    background-color: $bgcolor-dark;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+}
+
+nav a {
+    padding: 10px 5px;
+}
