@@ -41,7 +41,8 @@ nav a {
   top: 30px; }
 
 h1, h2, h3, h4, p, img {
-  margin: 0; }
+  margin: 0;
+  line-height: 1.4; }
 
 body {
   margin: 0; }
@@ -71,5 +72,12 @@ a {
 
 .content ul {
   padding: 0 20px; }
+
+.courses {
+  padding: 10px 20px; }
+
+.class h2 {
+  margin-top: 20px;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
