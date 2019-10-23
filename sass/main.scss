@@ -2,8 +2,19 @@
 @import '_header';
 @import 'nav';
 
+h1, h2, h3, h4, p, img {
+    margin: 0;
+}
 
+body{
+    margin: 0;
+}
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
 
 
 .toggle-feed{
@@ -23,3 +34,11 @@ a {
     text-decoration: none;
 }
 
+.content {
+    margin: 0;
+    padding: 20px 20px 60px;
+}
+
+.content ul {
+    padding: 0 20px;
+}
