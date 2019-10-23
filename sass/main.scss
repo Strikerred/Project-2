@@ -5,7 +5,11 @@
 
 h1, h2, h3, h4, p {
     margin: 0;
+<<<<<<< HEAD
+    padding: 3px 0;
+=======
     line-height: 1.4;
+>>>>>>> b7d56ff0f6dee4c0833650d217aafd850987b74c
 }
 
 img {
@@ -47,10 +51,27 @@ a {
 
 .content {
     margin: 0;
-    padding: 20px 20px 85px;
+    padding: 20px 20px 90px;
     font-family: $content-font;
+
     ul {
         padding: 0 20px;
+    }
+
+    a{
+        color: $textcolor-link;
+        font-weight: bold;
+    }
+
+    .button{
+        text-align: center;
+    }
+
+    #apply-button{
+        margin: 0;
+        color: $textcolor-light;
+        background-color: $red;
+        padding: 10px;
     }
 }
 
