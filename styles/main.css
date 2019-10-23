@@ -6,6 +6,9 @@
   margin-top: 20px;
   text-align: center; }
 
+.more {
+  display: none; }
+
 header {
   background-color: black;
   color: white; }
