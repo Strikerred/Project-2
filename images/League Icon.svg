@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="23.82" viewBox="0 0 13 23.82">
+  <g id="League_Icon" data-name="League Icon" transform="translate(0 0)">
+    <path id="Path_325" data-name="Path 325" d="M1.081-6.167H12.958" transform="translate(-0.5 23.32)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <g id="Rectangle_667" data-name="Rectangle 667" transform="translate(0 10.82)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <rect width="13" height="13" stroke="none"/>
+      <rect x="0.5" y="0.5" width="12" height="12" fill="none"/>
+    </g>
+    <g id="Rectangle_668" data-name="Rectangle 668" transform="translate(2 7.82)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <rect width="9" height="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="8" height="3" fill="none"/>
+    </g>
+    <g id="Rectangle_669" data-name="Rectangle 669" transform="translate(4 4.82)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <rect width="5" height="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="4" height="3" fill="none"/>
+    </g>
+    <g id="Subtraction_3" data-name="Subtraction 3" transform="translate(0.758 0)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5.741,5.82A5.536,5.536,0,0,1,1.858,4.209,6.25,6.25,0,0,1,.023.262H0V0H11.483V.262H11.46A6.25,6.25,0,0,1,9.624,4.209,5.538,5.538,0,0,1,5.741,5.82Z" stroke="none"/>
+      <path d="M 5.74055290222168 4.819999217987061 C 6.920382976531982 4.819999217987061 8.051362991333008 4.349289417266846 8.925152778625488 3.494589328765869 C 9.615129470825195 2.819679498672485 10.09934425354004 1.953712344169617 10.32991886138916 0.9999993443489075 L 1.152751445770264 0.9999993443489075 C 1.383325099945068 1.953705072402954 1.867499351501465 2.819671392440796 2.557413101196289 3.494659423828125 C 3.430983066558838 4.349319458007813 4.561442852020264 4.819999217987061 5.74055290222168 4.819999217987061 M 5.74055290222168 5.819999217987061 C 4.298452854156494 5.819999217987061 2.919632911682129 5.248029232025146 1.858083009719849 4.20945930480957 C 0.8029429912567139 3.177149295806885 0.1512630134820938 1.775229334831238 0.02308300696313381 0.2619293630123138 L 3.00781243822712e-06 0.2619293630123138 L 2.3007813069853e-05 -6.294250738392293e-07 L 11.48266315460205 -6.294250738392293e-07 L 11.48266315460205 0.2619293630123138 L 11.45957279205322 0.2619293630123138 C 11.33141326904297 1.775319337844849 10.67935276031494 3.177549362182617 9.624412536621094 4.20945930480957 C 8.562652587890625 5.248029232025146 7.183342933654785 5.819999217987061 5.74055290222168 5.819999217987061 Z" stroke="none" fill="#fff"/>
+    </g>
+  </g>
+</svg>

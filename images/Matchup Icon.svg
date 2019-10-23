@@ -1,0 +1,9 @@
+<svg id="Matchup_Icon" data-name="Matchup Icon" xmlns="http://www.w3.org/2000/svg" width="25" height="19.402" viewBox="0 0 25 19.402">
+  <g id="Rectangle_665" data-name="Rectangle 665" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+    <rect width="25" height="19.402" stroke="none"/>
+    <rect x="0.5" y="0.5" width="24" height="18.402" fill="none"/>
+  </g>
+  <text id="_2" data-name="2" transform="translate(4 14.402)" fill="#fff" font-size="11" font-family="SegoeUI, Segoe UI" letter-spacing="0.07em"><tspan x="0" y="0">2</tspan></text>
+  <text id="_1" data-name="1" transform="translate(17 14.402)" fill="#fff" font-size="11" font-family="SegoeUI, Segoe UI" letter-spacing="0.07em"><tspan x="0" y="0">1</tspan></text>
+  <line id="Line_532" data-name="Line 532" y1="18" transform="translate(12.5 0.902)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+</svg>
