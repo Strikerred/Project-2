@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.courses {
+  padding: 10px 20px; }
+
+.class h2 {
+  margin-top: 20px;
+  text-align: center; }
+
 header {
   background-color: black;
   color: white; }
@@ -78,12 +85,5 @@ a {
 
 .content ul {
   padding: 0 20px; }
-
-.courses {
-  padding: 10px 20px; }
-
-.class h2 {
-  margin-top: 20px;
-  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

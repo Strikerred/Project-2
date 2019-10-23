@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'courses';
 @import '_header';
 @import 'nav';
 
@@ -57,11 +58,3 @@ a {
     padding: 0 20px;
 }
 
-.courses{
-    padding: 10px 20px;
-}
-
-.class h2{
-    margin-top: 20px;
-    text-align: center;
-}
