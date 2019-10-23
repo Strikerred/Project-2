@@ -1,10 +1,15 @@
 @import 'variables';
+@import 'courses';
 @import '_header';
 @import 'nav';
 
 h1, h2, h3, h4, p {
     margin: 0;
+<<<<<<< HEAD
     padding: 3px 0;
+=======
+    line-height: 1.4;
+>>>>>>> b7d56ff0f6dee4c0833650d217aafd850987b74c
 }
 
 img {
@@ -69,3 +74,8 @@ a {
         padding: 10px;
     }
 }
+
+.content ul {
+    padding: 0 20px;
+}
+
