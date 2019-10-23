@@ -1,53 +1,104 @@
-/*
-Error: Invalid CSS after "    padding: 3px 0": expected "{", was ";"
-        on line 9 of sass/main.scss
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.courses {
+  padding: 10px 20px; }
 
-4: @import 'nav';
-5: 
-6: h1, h2, h3, h4, p {
-7:     margin: 0;
-8: <<<<<<< HEAD
-9:     padding: 3px 0;
-10: =======
-11:     line-height: 1.4;
-12: >>>>>>> b7d56ff0f6dee4c0833650d217aafd850987b74c
-13: }
-14: 
+.class h2 {
+  margin-top: 20px;
+  text-align: center; }
 
-Backtrace:
-sass/main.scss:9
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    padding: 3px 0\": expected \"{\", was \";\"\A         on line 9 of sass/main.scss\A \A 4: @import 'nav';\A 5: \A 6: h1, h2, h3, h4, p {\A 7:     margin: 0;\A 8: <<<<<<< HEAD\A 9:     padding: 3px 0;\A 10: =======\A 11:     line-height: 1.4;\A 12: >>>>>>> b7d56ff0f6dee4c0833650d217aafd850987b74c\A 13: }\A 14: "; }
+.more {
+  display: none; }
+
+header {
+  background-color: black;
+  color: white; }
+
+header h1 {
+  padding: 10vh 10vw;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif; }
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background-color: black;
+  margin: 0; }
+  nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; }
+  nav li {
+    position: relative;
+    margin: 0;
+    padding: 27px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  nav img {
+    position: absolute;
+    display: block;
+    top: 5px; }
+  nav a {
+    position: absolute;
+    top: 0px;
+    padding-top: 30px; }
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 3px 0;
+  line-height: 1.4; }
+
+img {
+  height: auto; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  margin: 0; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+.toggle-feed {
+  display: flex;
+  justify-content: space-around; }
+  .toggle-feed a {
+    padding: 0 20px;
+    border-bottom: 3px solid white;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+.content {
+  margin: 0;
+  padding: 20px 20px 90px;
+  font-family: "Roboto", sans-serif; }
+  .content ul {
+    padding: 0 20px; }
+  .content a {
+    color: #2828cf;
+    font-weight: bold; }
+  .content .button {
+    text-align: center; }
+  .content #apply-button {
+    margin: 0;
+    color: white;
+    background-color: #E53F23;
+    padding: 10px; }
+
+.content ul {
+  padding: 0 20px; }
+
+/*# sourceMappingURL=main.css.map */
