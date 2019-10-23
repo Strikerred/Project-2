@@ -7,33 +7,31 @@ nav{
     background-color: $bgcolor-dark;
     margin:0;
     
-}
+    ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
 
-nav ul{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-}
+    li {
+        position: relative;
+        margin: 0;
+        padding: 27px 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-nav li {
-    position: relative;
-    margin: 0;
-    padding: 27px 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
+    img {
+        position: absolute;
+        display: block;
+        top: 5px;
+    }
 
-nav img {
-    position: absolute;
-    display: block;
-    top: 5px;
-}
-
-nav a {
-    position: absolute;
-    top: 30px;
+    a {
+        position: absolute;
+        top: 30px;
+    }
 }

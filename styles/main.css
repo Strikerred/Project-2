@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 header {
   background-color: black;
   color: white; }
@@ -15,34 +16,37 @@ nav {
   width: 100%;
   background-color: black;
   margin: 0; }
+  nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; }
+  nav li {
+    position: relative;
+    margin: 0;
+    padding: 27px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  nav img {
+    position: absolute;
+    display: block;
+    top: 5px; }
+  nav a {
+    position: absolute;
+    top: 30px; }
 
-nav ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-around; }
-
-nav li {
-  position: relative;
-  margin: 0;
-  padding: 27px 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-nav img {
-  position: absolute;
-  display: block;
-  top: 5px; }
-
-nav a {
-  position: absolute;
-  top: 30px; }
-
-h1, h2, h3, h4, p, img {
+h1, h2, h3, h4, p {
   margin: 0;
   line-height: 1.4; }
+
+img {
+  height: auto; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 body {
   margin: 0; }
@@ -55,12 +59,11 @@ body {
 .toggle-feed {
   display: flex;
   justify-content: space-around; }
-
-.toggle-feed a {
-  padding: 0 20px;
-  border-bottom: 3px solid white;
-  font-size: 1.2em;
-  font-family: Arial, Helvetica, sans-serif; }
+  .toggle-feed a {
+    padding: 0 20px;
+    border-bottom: 3px solid white;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif; }
 
 a {
   color: white;
@@ -68,7 +71,10 @@ a {
 
 .content {
   margin: 0;
-  padding: 20px 20px 60px; }
+  padding: 20px 20px 85px;
+  font-family: "Roboto", sans-serif; }
+  .content ul {
+    padding: 0 20px; }
 
 .content ul {
   padding: 0 20px; }
