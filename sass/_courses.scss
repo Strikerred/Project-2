@@ -1,5 +1,6 @@
 .courses{
     padding: 10px 20px;
+    padding-bottom: 80px;
 }
 
 .class h2{
@@ -10,4 +11,16 @@
 
 .more {
     display: none;
+}
+
+.more-btn {
+    color: $textcolor-light;
+    background-color: $red;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btn{
+    text-align: center;
 }

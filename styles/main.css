@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 .courses {
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  padding-bottom: 80px; }
 
 .class h2 {
   margin-top: 20px;
@@ -8,6 +9,16 @@
 
 .more {
   display: none; }
+
+.more-btn {
+  color: white;
+  background-color: #E53F23;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px; }
+
+.btn {
+  text-align: center; }
 
 header {
   display: flex;
@@ -41,6 +52,21 @@ header {
       border-bottom: 3px solid white;
       font-size: 1.2em;
       font-family: Arial, Helvetica, sans-serif; }
+
+input {
+  margin: 10px 0; }
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box; }
+
+input[type=submit] {
+  color: white;
+  background-color: #E53F23;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px; }
 
 nav {
   position: fixed;
