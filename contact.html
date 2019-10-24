@@ -19,10 +19,21 @@
         Phone Number
         <input type="text" name="Phone Number">
         Email
-        <input type="text" name="email"> <br>
-        <input type="radio" name="type" value="Current Student" checked> Current student
-        <input type="radio" name="type" value="Prospective Student"> Prospective Student
-        <input type="radio" name="type" value="Instructor"> Instructor <br>
+        <input type="text" name="email"> 
+        <div class="row">
+            <div class="col-form">
+            <input type="radio" id="Current student" name="type" value="Current Student" checked> 
+            <label for="Current Student">Current student</label>
+            </div>
+            <div class="col-form">
+            <input type="radio" id="Prospective Student" name="type" value="Prospective Student"> 
+            <label for="Prospective Student">Prospective Student</label> 
+            </div>
+            <div class="col-form">
+            <input type="radio" id="Instructor" name="type" value="Instructor"> 
+            <label for="Instructor">Instructor</label>
+            </div>
+        </div>
         <div class="btn">
         <input type="submit">
         </div>
