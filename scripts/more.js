@@ -2,12 +2,15 @@ console.log($('.more-btn'))
 $('.courses').on('click', '.more-btn', display);
 
 function display() {
-    console.log($(this))
-    $(this).css('background-color', 'red')
-    console.log($(this).find('.more').first())
-    console.log($(this).closest('span') )
-    if($(this).closest('.more').css('display') == 'none'){
-        $(this).closest('.more').css('display', 'inline');
+    if($(this).parent().parent().children('p').children('.more').css('display') == 'none'){
+        $(this).parent().parent().children('p').children('.more').css('display', 'inline');
+        $(this).parent().parent().children('p').children('.dots').css('display', 'none');
+        $(this).html('Read Less')
+
+    } else {
+        $(this).parent().parent().children('p').children('.more').css('display', 'none');
+        $(this).parent().parent().children('p').children('.dots').css('display', 'inline');
+        $(this).html('Read More')
     }
 
 };
