@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SSD - Software System Developer</title>
+    <title>SSD - Contact</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -12,24 +12,27 @@
         <h1>Contact</h1>
     </header>
     <form action="">
-        First Name
-        <input type="text" name="firstname">
-        Last Name
-        <input type="text" name="lastname">
-        Phone Number
-        <input type="text" name="Phone Number">
-        Email
-        <input type="text" name="email"> 
+        <label class="text-label" for="fname">First Name</label> 
+        <input id="fname" type="text" name="firstname" placeholder="First Name">
+
+        <label class="text-label" for="lname">Last Name</label> 
+        <input id="lname" type="text" name="lastname" placeholder="Last Name">
+
+        <label class="text-label" for="number">Phone Number</label> 
+        <input id="number" type="text" name="Phone Number" placeholder="Phone Number">
+
+        <label class="text-label" for="email">Email</label> 
+        <input id="email" type="text" name="email" placeholder="email"> 
         <div class="row">
-            <div class="col-form">
+            <div class="col-form radio">
             <input type="radio" id="Current student" name="type" value="Current Student" checked> 
-            <label for="Current Student">Current student</label>
+            <label for="Current student">Current student</label>
             </div>
-            <div class="col-form">
+            <div class="col-form radio">
             <input type="radio" id="Prospective Student" name="type" value="Prospective Student"> 
             <label for="Prospective Student">Prospective Student</label> 
             </div>
-            <div class="col-form">
+            <div class="col-form radio">
             <input type="radio" id="Instructor" name="type" value="Instructor"> 
             <label for="Instructor">Instructor</label>
             </div>

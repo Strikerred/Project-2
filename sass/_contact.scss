@@ -2,6 +2,55 @@ input {
     margin: 10px 0;
 }
 
+.text-label {
+    padding: 0 10px;
+}
+
+form{
+    margin: 2px 0;
+    padding: 20px;
+    background-color: $bgcolor-dark;
+    height: 65vh;
+}
+
+.text-label{
+    display: none;
+}
+
+form label{
+    color: $textcolor-light;
+}
+
+.col-form.radio {
+    padding-left: 50px;
+    max-width: 130px;
+}
+
+.radio input {
+    display: none;
+}
+
+.radio label {
+    position: relative;
+    font-size: 1.4em;
+}
+
+.radio label:before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $grey;
+    top:0;
+    left: -50px;
+    border-radius: 50%;
+}
+
+.radio input:checked ~ label:before {
+    background-color: $textcolor-light;
+    border: 15px solid $red;
+}
+
 input[type=text]{
     width: 100%;
     padding: 12px 20px;
@@ -17,6 +66,8 @@ input[type=submit]{
 }
 
 .row{
+    margin: 0 auto;
     display: flex;
-    flex: 1
+    flex: 1;
+    justify-content: space-around;
 }
