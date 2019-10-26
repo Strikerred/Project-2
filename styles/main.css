@@ -1,43 +1,261 @@
-/*
-Error: Invalid CSS after "h1, h2, h3, h4, p ": expected selector or at-rule, was "{"
-        on line 8 of sass/main.scss
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.courses {
+  padding: 10px 20px;
+  padding-bottom: 80px; }
 
-3: @import 'header';
-4: @import 'contact';
-5: @import 'nav';
-6: @import 'resources'
-7: 
-8: h1, h2, h3, h4, p {
-9:     margin: 0;
-10:     padding: 3px 0;
-11:     line-height: 1.4;
-12: }
-13: 
+.class h2 {
+  margin-top: 20px;
+  text-align: center; }
 
-Backtrace:
-sass/main.scss:8
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:42:in `parse'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/var/lib/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/var/lib/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/var/lib/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/var/lib/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/var/lib/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/var/lib/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/var/lib/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/var/lib/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"h1, h2, h3, h4, p \": expected selector or at-rule, was \"{\"\A         on line 8 of sass/main.scss\A \A 3: @import 'header';\A 4: @import 'contact';\A 5: @import 'nav';\A 6: @import 'resources'\A 7: \A 8: h1, h2, h3, h4, p {\A 9:     margin: 0;\A 10:     padding: 3px 0;\A 11:     line-height: 1.4;\A 12: }\A 13: "; }
+.class p {
+  font-size: 20px; }
+
+.more {
+  display: none; }
+
+.more-btn {
+  color: white;
+  background-color: #E53F23;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 10px;
+  width: 100%; }
+
+.btn {
+  text-align: center;
+  margin: 10px; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  height: 280px;
+  justify-content: flex-end; }
+  header h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto 0; }
+  header img {
+    display: block;
+    height: 100%;
+    object-fit: cover; }
+  header .student {
+    width: 100%; }
+  header .instructors {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%; }
+    header .instructors .instructor {
+      width: 50%; }
+  header .toggle-feed {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; }
+    header .toggle-feed a {
+      padding: 0 20px;
+      border-bottom: 3px solid white;
+      font-size: 1.2em;
+      font-family: Arial, Helvetica, sans-serif; }
+
+input {
+  margin: 10px 0; }
+
+.text-label {
+  padding: 0 10px; }
+
+form {
+  margin: 2px 0;
+  padding: 20px;
+  background-color: black;
+  height: 65vh; }
+
+.text-label {
+  display: none; }
+
+form label {
+  color: white; }
+
+.col-form.radio {
+  padding-left: 50px;
+  max-width: 130px; }
+
+.radio input {
+  display: none; }
+
+.radio label {
+  position: relative;
+  font-size: 1.4em; }
+
+.radio label:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #E7E2E1;
+  top: 0;
+  left: -50px;
+  border-radius: 50%; }
+
+.radio input:checked ~ label:before {
+  background-color: white;
+  border: 15px solid #E53F23; }
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box; }
+
+input[type=submit] {
+  color: white;
+  background-color: #E53F23;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px; }
+
+.row {
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  justify-content: space-around; }
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background-color: black;
+  margin: 0; }
+  nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; }
+  nav li {
+    position: relative;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  nav img {
+    position: absolute;
+    display: block;
+    top: 5px; }
+  nav a {
+    position: absolute;
+    top: 0px;
+    padding-top: 30px;
+    padding: 27px 20px;
+    text-decoration: none;
+    color: white; }
+    nav a:hover, nav a:focus, nav a:active {
+      background-color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      color: white; }
+
+header.resources {
+  background-color: #E7E2E1;
+  height: auto;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif; }
+
+header.resources ul {
+  padding: 0;
+  display: flex;
+  flex: 1;
+  justify-content: space-around; }
+
+header.resources li {
+  list-style: none; }
+
+.resource {
+  border: 2px solid #E7E2E1;
+  margin: 20px; }
+
+.resource h2 {
+  padding-left: 10px;
+  padding-top: 20px; }
+
+.resource p {
+  padding: 10px; }
+
+.content .resource a {
+  display: inline-block;
+  width: 100%;
+  line-height: 3em;
+  background-color: #E53F23;
+  color: white;
+  text-align: center;
+  border-top: 2px solid #E7E2E1; }
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 3px 0;
+  line-height: 1.4; }
+
+img {
+  height: auto; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  margin: 0;
+  background-color: black;
+  height: 90vh; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+/**************I put this code on the _header.scss section**********/
+a {
+  color: white;
+  text-decoration: none; }
+
+.content {
+  margin: 0;
+  padding: 20px 20px 90px;
+  font-family: "Roboto", sans-serif; }
+  .content ul {
+    padding: 0 20px; }
+  .content a {
+    color: #2828cf;
+    font-weight: bold; }
+  .content .button {
+    text-align: center; }
+  .content #apply-button {
+    margin: 0;
+    color: white;
+    background-color: #E53F23;
+    padding: 10px; }
+  .content .row {
+    display: flex;
+    background-color: #E7E2E1;
+    padding: 15px 10px 5px;
+    justify-content: center;
+    align-items: flex-end; }
+    .content .row img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%; }
+    .content .row .contact {
+      display: block;
+      width: 100%;
+      padding-left: 15px;
+      font-size: 0.8em; }
+  .content .social-media {
+    display: flex;
+    background-color: #E7E2E1;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted black;
+    justify-content: flex-end;
+    padding: 0 20px 5px 0; }
+
+/*# sourceMappingURL=main.css.map */

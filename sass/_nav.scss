@@ -37,9 +37,13 @@ nav{
         top: 0px;
         padding-top: 30px;
         padding: 27px 20px;
+        text-decoration: none;
+        color: $textcolor-light;
 
         #{$link-hover-selector} {
             background-color: rgba($bgcolor-light, 0.3);
+            text-decoration: none;
+            color: $textcolor-light;
         }
     }
 }

@@ -1,0 +1,41 @@
+header.resources{
+    background-color: $grey;
+    height: auto;
+    color: $textcolor-dark;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header.resources ul {
+    padding: 0;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;;
+}
+
+header.resources li{
+    list-style: none;
+}
+
+.resource {
+    border: 2px solid $grey;
+    margin: 20px
+}
+
+.resource h2 {
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.resource p {
+    padding: 10px;
+}
+
+.content .resource a {
+    display: inline-block;
+    width: 100%;
+    line-height: 3em;
+    background-color: $red;
+    color: $textcolor-light;
+    text-align: center;
+    border-top: 2px solid $grey;
+}

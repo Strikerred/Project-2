@@ -3,7 +3,8 @@
 @import 'header';
 @import 'contact';
 @import 'nav';
-@import 'resources'
+@import 'resources';
+@import 'schedule';
 
 h1, h2, h3, h4, p {
     margin: 0;
@@ -22,6 +23,8 @@ table{
 
 body{
     margin: 0;
+    background-color: $bgcolor-dark;
+    height: 90vh;
 }
 
 *,
@@ -104,5 +107,3 @@ a {
         padding: 0 20px 5px 0;
     }
 }
-
-
