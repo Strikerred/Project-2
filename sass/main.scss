@@ -33,6 +33,10 @@ body{
     box-sizing: border-box;
 }
 
+.content{
+    background-color: $bgcolor-light;
+}
+
 /**************I put this code on the _header.scss section**********/
 // .toggle-feed{
 //     display: flex;
