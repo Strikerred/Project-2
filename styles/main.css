@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 .courses {
   padding: 10px 20px;
-  padding-bottom: 80px; }
+  padding-bottom: 80px;
+  background-color: #fff;
+  width: 100%; }
 
 .class h2 {
   margin-top: 20px;
