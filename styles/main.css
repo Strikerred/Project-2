@@ -2,7 +2,12 @@
 .courses {
   padding: 10px 20px;
   padding-bottom: 80px;
+<<<<<<< HEAD
 }
+=======
+  background-color: #fff;
+  width: 100%; }
+>>>>>>> abd918ae1678fa262814ca8dbf37b6c614954271
 
 .class h2 {
   margin-top: 20px;
