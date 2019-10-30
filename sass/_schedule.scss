@@ -1,0 +1,27 @@
+.month{
+    background-color: $red;
+    color: $textcolor-light;
+    border: none;
+}
+
+#outerAccordion {
+    padding: 10px 0 70px;
+}
+
+@font-face{
+    font-family: "halflings";
+    src: url('../fonts/glyphicons-halflings-regular.woff');
+}
+
+
+.btn:after {
+    font-family: "halflings";
+    content: "\e114";
+    color: white;
+    float: right;
+    margin-left: 15px;
+  }
+  /* Icon when the collapsible content is hidden */
+  .btn.collapsed:after {
+    content: "\e080";
+  }
