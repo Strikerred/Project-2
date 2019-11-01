@@ -159,17 +159,18 @@ schedule = [
 ["May 8", "Demo Day","Phil Weier"],
 ];
 
-
+let w = 0;
 for(i in schedule){
-let d = parseInt(i)+1;
-console.log("day"+d)
-let day = document.getElementById("day"+d);
-console.log(day)
-if(schedule[i][1]){
-    let p1 = document.createElement("p");
-    let txt1 = document.createTextNode(schedule[i][0]);
-    p1.appendChild(txt1);
-    day.appendChild(p1);
+let d = parseInt(i)%5;
+if(d == 0){
+    w++
+    console.log("week"+w)
+    var week = document.getElementById("week"+w);
 }
 
+
+let p = document.createElement("p");
+let txt = document.createTextNode(schedule[i][0]);
+p.appendChild(txt);
+week.appendChild(p);
 }
