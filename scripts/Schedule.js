@@ -168,9 +168,25 @@ if(d == 0){
     var week = document.getElementById("week"+w);
 }
 
-
-let p = document.createElement("p");
-let txt = document.createTextNode(schedule[i][0]);
-p.appendChild(txt);
-week.appendChild(p);
+if(schedule[i][0]){
+let p1 = document.createElement("p");
+let txt1 = document.createTextNode(schedule[i][0]);
+p1.appendChild(txt1);
+week.appendChild(p1);
+}
+if(schedule[i][1]){
+let p2 = document.createElement("p");
+let txt2 = document.createTextNode(schedule[i][1]);
+p2.appendChild(txt2);
+week.appendChild(p2);
+}
+if(schedule[i][2]){
+let p3 = document.createElement("p");
+let txt3 = document.createTextNode(schedule[i][2]);
+p3.appendChild(txt3);
+week.appendChild(p3);
+}
+if(d != 4){
+week.appendChild(document.createElement("hr"));
+}
 }
