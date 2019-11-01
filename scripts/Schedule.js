@@ -167,7 +167,7 @@ let day = document.getElementById("day"+d);
 console.log(day)
 if(schedule[i][1]){
     let p1 = document.createElement("p");
-    let txt1 = document.createTextNode(schedule[i][1]);
+    let txt1 = document.createTextNode(schedule[i][0]);
     p1.appendChild(txt1);
     day.appendChild(p1);
 }
