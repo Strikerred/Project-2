@@ -146,7 +146,7 @@ const schedule = [
   ['Mar 25', 'Full-Stack JS', 'Medhat Elmasry', 360],
   ['Mar 26', 'Mobile Project', 'Alex Cooper', 360],
   ['Mar 27', 'Mobile Project', 'Alex Cooper', 360],
-  ['Mar 30', 'Mobile Project (optional Demos)', 'Alex Coope,r', 360],
+  ['Mar 30', 'Mobile Project (optional Demos)', 'Alex Cooper', 360],
   ['Mar 31', 'Final Project', 'Phil Weier', 360],
   ['Apr 1', 'Final Project', 'Phil Weier', 360],
   ['Apr 2', 'Interview Skills', 'Marlene Delanghe', 360],
@@ -157,7 +157,8 @@ const schedule = [
   ['Apr 9', 'Mock Interviews', 'Phil/Marlene'],
   ['Apr 10', 'Good Friday'],
   ['Apr 13', 'Easter Monday'],
-  ['Apr 1-May 7', 'Industry Projects', 'Phil Weier'],
+  ['Apr 1', 'Industry Projects', 'Phil Weier'],
+  ['May 7', 'Industry Projects', 'Phil Weier'],
   ['May 8', 'Demo Day', 'Phil Weier']
 ]
 
@@ -166,11 +167,10 @@ for (i in schedule) {
   const d = parseInt(i) % 5
   if (d == 0) {
     w++
-    console.log('week' + w)
     var week = document.getElementById('week' + w)
   }
 
-  if (schedule[i].length == 1) {
+  if (schedule[i].length >= 1) {
     const p1 = document.createElement('p')
     const txt1 = document.createTextNode(schedule[i][0])
     p1.appendChild(txt1)
@@ -193,22 +193,18 @@ for (i in schedule) {
   }
 }
 
-$('.collapse').on('shown.bs.collapse', function (e) {
+$('.collapse').on('show', function (e) {
   var $btn = $(this)
-  const $btns = $('.month')
+  console.log(e.timeStamp)
 
-  console.log($btns)
-  console.log($btn.offset().top)
+  var bottom = $btn.offset().top + $btn.height()
 
   // $('body')[0].scrollTop = $('body')[0].scrollHeight
 
-  if ($btn.offset().top > 500) {
+  if (bottom > 1000) {
     $('html, body').animate({
-      scrollTop: document.body.scrollHeight
-    }, 500, function () {
-      console.log('finished...')
-      console.log($(this)[0].scrollHeight)
-    })
+      scrollTop: $btn.offset().top
+    }, 500)
   }
 
 /*
