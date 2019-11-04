@@ -193,17 +193,20 @@ for (i in schedule) {
   }
 }
 
-$('.collapse').on('show', function (e) {
+$('.collapse').on('shown.bs.collapse', function (e) {
   var $btn = $(this)
   console.log(e.timeStamp)
+  console.log($btn)
 
   var bottom = $btn.offset().top + $btn.height()
+  var avg = bottom + $btn.offset().top
+  avg *= .5
 
   // $('body')[0].scrollTop = $('body')[0].scrollHeight
 
-  if (bottom > 1000) {
+  if (bottom > 500) {
     $('html, body').animate({
-      scrollTop: $btn.offset().top
+      scrollTop: avg
     }, 500)
   }
 
