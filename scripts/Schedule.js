@@ -193,22 +193,27 @@ for (i in schedule) {
   }
 }
 
+let last;
+
 $('.collapse').on('shown.bs.collapse', function (e) {
   var $btn = $(this)
   console.log(e.timeStamp)
   console.log($btn)
 
+  var top = $btn.offset().top
   var bottom = $btn.offset().top + $btn.height()
-  var avg = bottom + $btn.offset().top
+  var avg = bottom + top
   avg *= .5
 
   // $('body')[0].scrollTop = $('body')[0].scrollHeight
 
-  if (bottom > 500) {
+  if (bottom > 500 && e.timeStamp != last) {
     $('html, body').animate({
-      scrollTop: avg
+      scrollTop: top - 20
     }, 500)
   }
+
+  last = e.timeStamp
 
 /*
   $(window).animate({
