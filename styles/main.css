@@ -236,12 +236,21 @@ header.resources li {
 .icon-chevron-up:before {
   content: "\e903"; }
 
+h2 {
+  position: relative; }
+
+.btn {
+  display: block; }
+
 .btn:after {
+  position: absolute;
   font-family: "icomoon";
   content: "\e903";
   color: black;
-  float: right;
-  margin-left: 15px; }
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: auto; }
 
 .month:after {
   color: white; }

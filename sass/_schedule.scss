@@ -14,57 +14,70 @@
 }
 
 @font-face {
-    font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?6c92x1');
-    src:  url('../fonts/icomoon.eot?6c92x1#iefix') format('embedded-opentype'),
-      url('fonts/icomoon.ttf?6c92x1') format('truetype'),
-      url('../fonts/icomoon.woff?6c92x1') format('woff'),
-      url('../fonts/icomoon.svg?6c92x1#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?6c92x1');
+  src:  url('../fonts/icomoon.eot?6c92x1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?6c92x1') format('truetype'),
+    url('../fonts/icomoon.woff?6c92x1') format('woff'),
+    url('../fonts/icomoon.svg?6c92x1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
   
-  [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-chevron-right:before {
-    content: "\e900";
-  }
-  .icon-chevron-left:before {
-    content: "\e901";
-  }
-  .icon-chevron-down:before {
-    content: "\e902";
-  }
-  .icon-chevron-up:before {
-    content: "\e903";
-  }
-.btn:after {
-    font-family: "icomoon";
-    content: "\e903";
-    color: black;
-    float: right;
-    margin-left: 15px;
-  }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-  .month:after{
-      color: white;
-  }
-  /* Icon when the collapsible content is hidden */
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-right:before {
+  content: "\e900";
+}
+.icon-chevron-left:before {
+  content: "\e901";
+}
+.icon-chevron-down:before {
+  content: "\e902";
+}
+.icon-chevron-up:before {
+  content: "\e903";
+}
+
+h2{
+  position: relative;
+}
+
+.btn{
+  display: block;
   
-  .btn.collapsed:after {
-    content: "\e902";
-  }
+}
+
+.btn:after {
+  position: absolute;
+  font-family: "icomoon";
+  content: "\e903";
+  color: black;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: auto;
+}
+
+.month:after{
+    color: white;
+}
+/* Icon when the collapsible content is hidden */
+
+.btn.collapsed:after {
+  content: "\e902";
+}
