@@ -201,20 +201,17 @@ $('.collapse').on('shown.bs.collapse', function (e) {
   console.log(e.timeStamp)
   console.log($btn)
 
-  var top = $btn.offset().top
   var bottom = $btn.offset().top + $btn.height()
-  var avg = bottom + top
+  var avg = bottom + $btn.offset().top
   avg *= .5
 
   // $('body')[0].scrollTop = $('body')[0].scrollHeight
 
-  if (bottom > 500 && e.timeStamp != last) {
+  if (bottom > 500) {
     $('html, body').animate({
-      scrollTop: top - 20
+      scrollTop: avg
     }, 500)
   }
-
-  last = e.timeStamp
 
 /*
   $(window).animate({
