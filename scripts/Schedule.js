@@ -157,20 +157,20 @@ const schedule = [
   ['Apr 9', 'Mock Interviews', 'Phil/Marlene'],
   ['Apr 10', 'Good Friday'],
   ['Apr 13', 'Easter Monday'],
-  ['Apr 1-May 7', 'Industry Projects', 'Phil Weier'],
+  ['Apr 1', 'Industry Projects', 'Phil Weier'],
+  ['May 7', 'Industry Projects', 'Phil Weier'],
+
   ['May 8', 'Demo Day', 'Phil Weier']
 ]
 
 let w = 0
-let i
 for (i in schedule) {
   const d = parseInt(i) % 5
-  if (d === 0) {
+  if (d == 0) {
     w++
     var week = document.getElementById('week' + w)
   }
-
-  if (schedule[i][0]) {
+  if (schedule[i].length >= 1) {
     const p1 = document.createElement('p')
     const txt1 = document.createTextNode(schedule[i][0])
     p1.appendChild(txt1)
@@ -188,27 +188,34 @@ for (i in schedule) {
     p3.appendChild(txt3)
     week.appendChild(p3)
   }
-  if (d !== 4) {
+  if (d != 4) {
     week.appendChild(document.createElement('hr'))
   }
 }
 
-$('.collapse').on('show.bs.collapse', function (e) {
+
+let last;
+
+$('.collapse').on('shown.bs.collapse', function (e) {
   var $btn = $(this)
-  const $btns = $('.month')
+  console.log(e.timeStamp)
+  console.log($btn)
 
-  console.log($btns)
-
-  console.log($btns.findIndex($btn))
+  var top = $btn.offset().top
+  var bottom = $btn.offset().top + $btn.height()
+  var avg = bottom + top
+  avg *= .5
 
   // $('body')[0].scrollTop = $('body')[0].scrollHeight
 
-  $('html, body').animate({
-    scrollTop: document.body.scrollHeight
-  }, 500, function () {
-    console.log('finished...')
-    console.log($(this)[0].scrollHeight)
-  })
+  if (bottom > 500 && e.timeStamp != last) {
+    $('html, body').animate({
+      scrollTop: top - 20
+    }, 500)
+  }
+
+  last = e.timeStamp
+
 /*
   $(window).animate({
     scrollTop: document.body.scrollHeight

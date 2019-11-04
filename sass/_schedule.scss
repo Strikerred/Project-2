@@ -8,6 +8,12 @@
     padding: 10px 0 70px;
 }
 
+.btn {
+  width: 100vw;
+  text-align: left;
+  position: relative;
+}
+
 @font-face{
     font-family: "halflings";
     src: url('../fonts/glyphicons-halflings-regular.woff') formt('woff');
@@ -63,15 +69,15 @@ h2{
 }
 
 .btn:after {
-  position: absolute;
-  font-family: "icomoon";
-  content: "\e903";
-  color: black;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: auto;
-}
+    position: absolute;
+    font-family: "icomoon";
+    content: "\e903";
+    color: black;
+    left: 80vw;
+    margin-left: 15px;
+    z-index: 2;
+  }
+
 
 .month:after{
     color: white;
