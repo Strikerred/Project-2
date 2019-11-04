@@ -162,6 +162,8 @@ const schedule = [
   ['May 8', 'Demo Day', 'Phil Weier']
 ]
 
+console.log(schedule[0][0].split(" ")[1]);
+
 let w = 0
 for (i in schedule) {
   const d = parseInt(i) % 5
