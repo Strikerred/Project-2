@@ -159,6 +159,7 @@ const schedule = [
   ['Apr 13', 'Easter Monday'],
   ['Apr 1', 'Industry Projects', 'Phil Weier'],
   ['May 7', 'Industry Projects', 'Phil Weier'],
+
   ['May 8', 'Demo Day', 'Phil Weier']
 ]
 
@@ -169,7 +170,6 @@ for (i in schedule) {
     w++
     var week = document.getElementById('week' + w)
   }
-
   if (schedule[i].length >= 1) {
     const p1 = document.createElement('p')
     const txt1 = document.createTextNode(schedule[i][0])
@@ -192,6 +192,7 @@ for (i in schedule) {
     week.appendChild(document.createElement('hr'))
   }
 }
+
 
 let last;
 
