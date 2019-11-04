@@ -46,7 +46,7 @@ const schedule = [
   ['Nov 6', 'C# - OOP', 'Phil Weier', 382],
   ['Nov 7', 'Angular', 'Alex Cooper', 382],
   ['Nov 8', 'Frontend Project', 'Michael Whyte', 382],
-  ['Nov 11', 'Remembrance Day',, ],
+  ['Nov 11', 'Remembrance Day'],
   ['Nov 12', 'Laravel', 'Jason Harrison', 382],
   ['Nov 13', 'Angular', 'Alex Cooper', 382],
   ['Nov 14', 'PHP', 'Jeff Parker', 382],
@@ -146,8 +146,8 @@ const schedule = [
   ['Mar 25', 'Full-Stack JS', 'Medhat Elmasry', 360],
   ['Mar 26', 'Mobile Project', 'Alex Cooper', 360],
   ['Mar 27', 'Mobile Project', 'Alex Cooper', 360],
-  ['Mar 30', 'Mobile Project (optional Demos)', 'Alex Coope,r', 360]
-    ['Mar 31', 'Final Project', 'Phil Weier', 360],
+  ['Mar 30', 'Mobile Project (optional Demos)', 'Alex Coope,r', 360],
+  ['Mar 31', 'Final Project', 'Phil Weier', 360],
   ['Apr 1', 'Final Project', 'Phil Weier', 360],
   ['Apr 2', 'Interview Skills', 'Marlene Delanghe', 360],
   ['Apr 3', 'Final Project', 'Phil Weier', 360],
@@ -170,7 +170,7 @@ for (i in schedule) {
     var week = document.getElementById('week' + w)
   }
 
-  if (schedule[i][0]) {
+  if (schedule[i].length == 1) {
     const p1 = document.createElement('p')
     const txt1 = document.createTextNode(schedule[i][0])
     p1.appendChild(txt1)
@@ -198,17 +198,19 @@ $('.collapse').on('shown.bs.collapse', function (e) {
   const $btns = $('.month')
 
   console.log($btns)
-
-  console.log($btns.findIndex($btn))
+  console.log($btn.offset().top)
 
   // $('body')[0].scrollTop = $('body')[0].scrollHeight
 
-  $('html, body').animate({
-    scrollTop: window.scrollHeight
-  }, 500, function () {
-    console.log('finished...')
-    console.log($(this)[0].scrollHeight)
-  })
+  if ($btn.offset().top > 500) {
+    $('html, body').animate({
+      scrollTop: document.body.scrollHeight
+    }, 500, function () {
+      console.log('finished...')
+      console.log($(this)[0].scrollHeight)
+    })
+  }
+
 /*
   $(window).animate({
     scrollTop: document.body.scrollHeight
