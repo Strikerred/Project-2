@@ -42,33 +42,40 @@ header {
   height: 280px;
   justify-content: flex-end;
 }
+
 header h1 {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto 0;
 }
+
 header img {
   display: block;
   height: 100%;
   object-fit: cover;
 }
+
 header .student {
   width: 100%;
 }
+
 header .instructors {
   display: flex;
   justify-content: space-between;
   flex: 1;
   width: 100%;
 }
+
 header .instructors .instructor {
   width: 50%;
 }
+
 header .toggle-feed {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
+
 header .toggle-feed a {
   padding: 0 20px;
   border-bottom: 3px solid white;
@@ -159,12 +166,14 @@ nav {
   background-color: black;
   margin: 0;
 }
+
 nav ul {
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: space-around;
 }
+
 nav li {
   position: relative;
   margin: 0;
@@ -173,11 +182,13 @@ nav li {
   flex-direction: column;
   align-items: center;
 }
+
 nav img {
   position: absolute;
   display: block;
   top: 5px;
 }
+
 nav a {
   position: absolute;
   top: 0px;
@@ -186,6 +197,7 @@ nav a {
   text-decoration: none;
   color: white;
 }
+
 nav a:hover, nav a:focus, nav a:active {
   background-color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
@@ -248,6 +260,11 @@ header.resources li {
   font-family: "halflings";
   src: url("../fonts/glyphicons-halflings-regular.woff");
 }
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+
 .btn:after {
   font-family: "halflings";
   content: "";
@@ -303,22 +320,27 @@ a {
   padding: 20px 20px 90px;
   font-family: "Roboto", sans-serif;
 }
+
 .content ul {
   padding: 0 20px;
 }
+
 .content a {
   color: #2828cf;
   font-weight: bold;
 }
+
 .content .button {
   text-align: center;
 }
+
 .content #apply-button {
   margin: 0;
   color: white;
   background-color: #E53F23;
   padding: 10px;
 }
+
 .content .row {
   display: flex;
   background-color: #E7E2E1;
@@ -326,18 +348,21 @@ a {
   justify-content: center;
   align-items: flex-end;
 }
+
 .content .row img {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
 }
+
 .content .row .contact {
   display: block;
   width: 100%;
   padding-left: 15px;
   font-size: 0.8em;
 }
+
 .content .social-media {
   display: flex;
   background-color: #E7E2E1;
@@ -346,5 +371,31 @@ a {
   justify-content: flex-end;
   padding: 0 20px 5px 0;
 }
+
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */
