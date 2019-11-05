@@ -23,7 +23,7 @@
   border-radius: 10px;
   width: 100%; }
 
-.btn {
+.course-btn {
   text-align: center;
   margin: 10px; }
 
@@ -193,7 +193,7 @@ header.resources li {
 .resource p {
   padding: 10px; }
 
-.content .resource a {
+.content-resources .resource a {
   display: inline-block;
   width: 100%;
   line-height: 3em;
@@ -288,10 +288,6 @@ body {
 *:after {
   box-sizing: border-box; }
 
-.content {
-  display: none;
-  background-color: white; }
-
 .content.current {
   display: inherit; }
 
@@ -299,8 +295,17 @@ a {
   color: white;
   text-decoration: none; }
 
+.content-resources {
+  margin: 0;
+  display: block;
+  background-color: white;
+  padding: 20px 20px 90px;
+  font-family: "Roboto", sans-serif; }
+
 .content {
   margin: 0;
+  display: none;
+  background-color: white;
   padding: 20px 20px 90px;
   font-family: "Roboto", sans-serif; }
   .content ul {

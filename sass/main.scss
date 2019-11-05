@@ -33,11 +33,6 @@ body{
     box-sizing: border-box;
 }
 
-.content{
-    display: none;
-    background-color: $bgcolor-light;
-}
-
 .content.current{
     display: inherit;
 }
@@ -47,8 +42,18 @@ a {
     text-decoration: none;
 }
 
+.content-resources {
+    margin: 0;
+    display: block;
+    background-color: $bgcolor-light;
+    padding: 20px 20px 90px;
+    font-family: $content-font;
+}
+
 .content {
     margin: 0;
+    display: none;
+    background-color: $bgcolor-light;
     padding: 20px 20px 90px;
     font-family: $content-font;
 
