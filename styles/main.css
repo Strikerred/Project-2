@@ -38,19 +38,19 @@ header {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     margin: auto 0; }
-  header img {
+  header .student {
+    width: 100%; }
+  header .instructor {
     display: block;
     height: 100%;
     object-fit: cover; }
-  header .student {
-    width: 100%; }
   header .instructors {
+    display: none; }
+  header .instructors.current {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex: 1;
     width: 100%; }
-    header .instructors .instructor {
-      width: 50%; }
   header .toggle-feed {
     display: flex;
     justify-content: space-around;
@@ -58,8 +58,17 @@ header {
     header .toggle-feed a {
       padding: 0 20px;
       border-bottom: 3px solid white;
-      font-size: 1.2em;
-      font-family: Arial, Helvetica, sans-serif; }
+      font-size: 1.5em;
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      cursor: pointer; }
+    header .toggle-feed a.current {
+      padding: 0 20px;
+      color: red;
+      border-bottom: 3px solid red;
+      font-size: 1.5em;
+      font-family: Arial, Helvetica, sans-serif;
+      cursor: pointer; }
 
 input {
   margin: 10px 0; }
@@ -201,6 +210,11 @@ header.resources li {
 #outerAccordion {
   padding: 10px 0 70px; }
 
+.btn {
+  width: 100vw;
+  text-align: left;
+  position: relative; }
+
 @font-face {
   font-family: "halflings";
   src: url("../fonts/glyphicons-halflings-regular.woff") formt("woff"); }
@@ -237,11 +251,13 @@ header.resources li {
   content: "\e903"; }
 
 .btn:after {
+  position: absolute;
   font-family: "icomoon";
   content: "\e903";
   color: black;
-  float: right;
-  margin-left: 15px; }
+  left: 80vw;
+  margin-left: 15px;
+  z-index: 2; }
 
 .month:after {
   color: white; }
@@ -273,9 +289,12 @@ body {
   box-sizing: border-box; }
 
 .content {
+  display: none;
   background-color: white; }
 
-/**************I put this code on the _header.scss section**********/
+.content.current {
+  display: inherit; }
+
 a {
   color: white;
   text-decoration: none; }
@@ -298,16 +317,20 @@ a {
     padding: 10px; }
   .content .row {
     display: flex;
+    flex-direction: column;
+    max-width: 445px; }
+  .content .info {
+    display: flex;
     background-color: #E7E2E1;
     padding: 15px 10px 5px;
     justify-content: center;
     align-items: flex-end; }
-    .content .row img {
+    .content .info img {
       width: 100px;
       height: 100px;
       object-fit: cover;
       border-radius: 50%; }
-    .content .row .contact {
+    .content .info .contact {
       display: block;
       width: 100%;
       padding-left: 15px;

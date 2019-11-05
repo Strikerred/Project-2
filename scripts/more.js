@@ -1,4 +1,3 @@
-console.log($('.more-btn'))
 $('.courses').on('click', '.more-btn', display);
 
 function display() {
@@ -14,3 +13,16 @@ function display() {
     }
 
 };
+
+	
+$('div.toggle-feed a').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('div.toggle-feed a').removeClass('current');
+    $('.content').removeClass('current');
+    $('.instructors').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+    $("#"+tab_id+1).addClass('current');
+})

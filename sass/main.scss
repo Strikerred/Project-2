@@ -34,21 +34,13 @@ body{
 }
 
 .content{
+    display: none;
     background-color: $bgcolor-light;
 }
 
-/**************I put this code on the _header.scss section**********/
-// .toggle-feed{
-//     display: flex;
-//     justify-content: space-around;
-
-//     a {
-//         padding: 0 20px;
-//         border-bottom: 3px solid white;
-//         font-size: 1.2em;
-//         font-family: $a-font;
-//     }
-// }
+.content.current{
+    display: inherit;
+}
 
 a {
     color: $textcolor-light;
@@ -81,6 +73,12 @@ a {
     }
 
     .row{
+        display: flex;
+        flex-direction: column;
+        max-width: 445px;
+    }
+
+    .info{
         display: flex;
         background-color: $grey;
         padding: 15px 10px 5px;
