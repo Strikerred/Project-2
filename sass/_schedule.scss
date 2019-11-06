@@ -76,3 +76,12 @@
   .btn.collapsed:after {
     content: "\e902";
   }
+
+  @include mq($largeTablet){
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: block;
+    }
+  }
