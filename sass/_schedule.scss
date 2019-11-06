@@ -62,14 +62,14 @@
     position: absolute;
     font-family: "icomoon";
     content: "\e903";
-    color: black;
+    color: $textcolor-dark;
     left: 80vw;
     margin-left: 15px;
     z-index: 2;
   }
 
   .month:after{
-      color: white;
+      color: $textcolor-light;
   }
   /* Icon when the collapsible content is hidden */
   
