@@ -61,6 +61,7 @@ nav {
   nav li {
     position: relative;
     margin: 0;
+    padding: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -83,11 +84,15 @@ nav {
 
 @media (min-width: 760px) {
   nav {
+    display: block;
+    position: relative;
     top: 0; }
     nav li {
       float: right; }
     nav img {
-      display: none; } }
+      display: none; }
+    nav a {
+      padding: 0; } }
 .courses {
   padding: 10px 20px;
   padding-bottom: 80px;
