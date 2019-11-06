@@ -81,6 +81,13 @@ nav {
       text-decoration: none;
       color: white; }
 
+@media (min-width: 760px) {
+  nav {
+    top: 0; }
+    nav li {
+      float: right; }
+    nav img {
+      display: none; } }
 .courses {
   padding: 10px 20px;
   padding-bottom: 80px;
@@ -133,7 +140,10 @@ nav {
     display: none; }
 
   .more {
-    display: block; } }
+    display: block; }
+
+  .dots {
+    display: none; } }
 input {
   margin: 10px 0; }
 

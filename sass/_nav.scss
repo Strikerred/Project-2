@@ -47,3 +47,17 @@ nav{
         }
     }
 }
+
+@include mq($largeTablet){
+    nav{
+        top: 0;
+        
+        li{
+            float: right;
+        }
+
+        img{
+        display: none;
+        }
+    }   
+}
