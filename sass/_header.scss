@@ -57,6 +57,12 @@ header {
             cursor: pointer;
         }
     }
+
+    @include mq($largeTablet){
+        .toggle-feed{
+            display: none;
+        }
+      }
 }
 
 

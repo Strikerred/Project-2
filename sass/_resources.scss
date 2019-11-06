@@ -6,14 +6,24 @@ header.resources{
 }
 
 header.resources ul {
+    margin: 0;
     padding: 0;
     display: flex;
     flex: 1;
-    justify-content: space-around;;
+    justify-content: space-between;
 }
 
 header.resources li{
     list-style: none;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    
+    #{$link-hover-selector}{
+        background-color: $red;
+        color: $textcolor-light;
+    }
 }
 
 .resource {
@@ -30,6 +40,14 @@ header.resources li{
     padding: 10px;
 }
 
+.content-resources {
+    margin: 0;
+    display: block;
+    background-color: $bgcolor-light;
+    padding: 20px 20px 90px;
+    font-family: $content-font;
+}
+
 .content-resources .resource a {
     display: inline-block;
     width: 100%;
@@ -39,3 +57,24 @@ header.resources li{
     text-align: center;
     border-top: 2px solid $grey;
 }
+
+@include mq($largeTablet){
+    .content-resources{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .resource {
+        max-width: 300px;
+
+        p{
+            height: 69%;
+            text-align: center;
+        }
+
+        h2{
+            text-align: center;
+        }
+    }
+  }
