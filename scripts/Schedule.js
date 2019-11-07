@@ -245,6 +245,8 @@ $('.collapse').on('shown.bs.collapse', function (e) {
 
   //Desktop
   const desktop = $('.desktop');
+  const monthNames = ["January", "February", "March", "April", "May", "June",  "July", "August", "September", "October", "November", "December"];
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
   function FormatMonth(month){
     let monthMap = {
@@ -284,8 +286,52 @@ $('.collapse').on('shown.bs.collapse', function (e) {
       return monthYearMap[month]
   }
 
+  function getWeek(date){
+    d = date.getDate()
+    day = date.getDay()
+    week = Math.ceil((d-day)/7);
+    return week;
+  }
+
   function addCalendarEntry(dateObj, row){
-    
+    let monthname = monthNames[dateObj.getMonth()]
+    let month = getMonth(monthname)
+    let entry = createDayEntry(dateObj, row)
+    month.append(entry)
+  }
+
+  function getMonth(month){
+    if($(`.${month}`).lenght){
+      return $(`.${month}`).first()
+    }else{
+      let newMonth = Month(month)
+      desktop.append(newMonth)
+      return newMonth
+    }
+  }
+
+  function Month(month) {
+    return `<div class="month ${month}">
+      <h2>${month}</h2>
+    </div>`;
+  }
+  
+  function createDayEntry(date, row) {
+    if(row.length > 1){
+      topic = row[1]
+    }else{
+      topic = ""
+    }
+    if(row.lenght > 2){
+      staff = row[2]
+    }else {
+      staff = ""
+    }
+    return `<div class="day week-${getWeek(date)} ${weekdays[date.getDay()]}">
+      <h3>${date.getDate()}</h3>
+      <p class="topic">${topic}</p>
+      <p class="staff">${staff}}</p>
+    </div>`;
   }
 
   for(let row of schedule){
