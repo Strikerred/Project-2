@@ -1,9 +1,9 @@
 @import 'variables';
 @import 'mixins';
-@import 'courses';
 @import 'header';
-@import 'contact';
 @import 'nav';
+@import 'courses';
+@import 'contact';
 @import 'resources';
 @import 'schedule';
 
@@ -41,14 +41,6 @@ body{
 a {
     color: $textcolor-light;
     text-decoration: none;
-}
-
-.content-resources {
-    margin: 0;
-    display: block;
-    background-color: $bgcolor-light;
-    padding: 20px 20px 90px;
-    font-family: $content-font;
 }
 
 .content {
@@ -115,3 +107,13 @@ a {
         padding: 0 20px 5px 0;
     }
 }
+
+@include mq($largeTablet){
+    .content{
+        display: block;
+    }
+
+    .content.current{
+        padding-bottom: 0px;
+    }
+  }

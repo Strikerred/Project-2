@@ -17,7 +17,7 @@ nav{
     li {
         position: relative;
         margin: 0;
-        
+        padding: 0;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -46,4 +46,25 @@ nav{
             color: $textcolor-light;
         }
     }
+}
+
+@include mq($largeTablet){
+    nav{
+        display: block;
+        position: relative;
+        top: 0;
+        
+        li{
+            float: right;
+        }
+
+        img{
+        display: none;
+        }
+
+        a { 
+            padding: 0;
+
+        }
+    }   
 }

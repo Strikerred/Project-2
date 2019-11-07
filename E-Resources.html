@@ -6,19 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SSD - Software System Developer</title>
     <link rel="stylesheet" href="styles/main.css">
+    <script src="more.js"></script>
 </head>
 <body>
+        <nav>
+                <ul>
+                    <li>
+                        <img src="images/home.svg" alt="home icon"> 
+                        <a href="index.html">Home</a>
+                    <li>
+                        <img src="images/schedule.svg" alt="schedule icon">
+                        <a href="schedule.html">Schedule</a>
+                    </li>
+                    <li>
+                        <img src="images/summary.svg" alt="summary icon">
+                        <a href="Courses.html">Summary</a>
+                    </li>
+                    <li>
+                        <img src="images/students-staff.svg" alt="students-staff icon">
+                        <a href="staff.html">Students & Staff</a>
+                    </li>
+                    <li>
+                        <img src="images/resources.svg" alt="resources icon">
+                        <a href="E-Resources.html">Resources</a>
+                    </li>
+                </ul>
+            </nav>
     <header class="resources">
+
         <ul>
-            <li>Javascript</li>
-            <li> Html</li>
-            <li>CSS</li>
-            <li>Frameworks</li>
-            <li>Backend</li>
+            <li><a class="tab-link current" data-tab="tab-1">Javascript</a></li>
+            <li><a class="tab-link" data-tab="tab-2">Html</a> </li>
+            <li><a class="tab-link" data-tab="tab-3">CSS</a></li>
+            <li><a class="tab-link" data-tab="tab-4">Frameworks</a></li>
+            <li><a class="tab-link" data-tab="tab-5">Backend</a></li>
         </ul>
 
     </header>
-    <div class="content-resources">
+    <div id="tab-1" class="content-resources">
+        <div class="resource">
+            <h2>W3 Schools</h2>
+            <p>The worlds largest developer site. W3Schools is optimized for learning, testing, and training</p>
+            <a href="https://www.w3schools.com/js/default.asp">Go To Resource</a>
+        </div>
+        <div class="resource">
+                <h2>Mozilla developer network</h2>
+                <p>Resources for developers, by developers. The open nature of the World Wide Web presents incredible opportunities for people who want to create websites or online applications. To take full advantage of the web's capabilities, you need to know how to use them. Explore the links below to learn more about various web technologies.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Go To Resource</a>
+        </div>
+        <div class="resource">
+            <h2>Tutorial Republic</h2>
+            <p>At tutorialrepublic.com you can learn the essentials of web development technologies from the basic to advanced topics, along with real life practice examples and useful references, so that you can create your own website or build career in web development.</p>
+            <a href="https://www.tutorialrepublic.com/javascript-tutorial/">Go To Resource</a>
+        </div>
+    </div>
+    <div id="tab-2" class="content-resources">
         <div class="resource">
             <h2>W3 Schools</h2>
             <p>The worlds largest developer site. W3Schools is optimized for learning, testing, and training</p>
@@ -35,28 +77,54 @@
             <a href="https://www.tutorialrepublic.com/html-tutorial/">Go To Resource</a>
         </div>
     </div>
-    <nav>
-        <ul>
-            <li>
-                <img src="images/home.svg" alt="home icon"> 
-                <a href="index.html">Home</a>
-            <li>
-                <img src="images/schedule.svg" alt="schedule icon">
-                <a href="schedule.html">Schedule</a>
-            </li>
-            <li>
-                <img src="images/summary.svg" alt="summary icon">
-                <a href="Courses.html">Summary</a>
-            </li>
-            <li>
-                <img src="images/students-staff.svg" alt="students-staff icon">
-                <a href="staff.html">Students & Staff</a>
-            </li>
-            <li>
-                <img src="images/resources.svg" alt="resources icon">
-                <a href="E-Resources.html">Resources</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="content-resources" id="tab-3">
+        <div class="resource">
+            <h2>W3 Schools</h2>
+            <p>The worlds largest developer site. W3Schools is optimized for learning, testing, and training</p>
+            <a href="https://www.w3schools.com/css/default.asp">Go To Resource</a>
+        </div>
+        <div class="resource">
+                <h2>Mozilla developer network</h2>
+                <p>Resources for developers, by developers. The open nature of the World Wide Web presents incredible opportunities for people who want to create websites or online applications. To take full advantage of the web's capabilities, you need to know how to use them. Explore the links below to learn more about various web technologies.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Go To Resource</a>
+        </div>
+        <div class="resource">
+            <h2>Tutorial Republic</h2>
+            <p>At tutorialrepublic.com you can learn the essentials of web development technologies from the basic to advanced topics, along with real life practice examples and useful references, so that you can create your own website or build career in web development.</p>
+            <a href="https://www.tutorialrepublic.com/css-tutorial/">Go To Resource</a>
+    </div>
+    <div class="content-resources" id="tab-4">
+        <div class="resource">
+            <h2>W3 Schools</h2>
+            <p>The worlds largest developer site. W3Schools is optimized for learning, testing, and training</p>
+            <a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Go To Resource</a>
+        </div>
+        <div class="resource">
+                <h2>Bootstrap</h2>
+                <p>The official Documentation for Bootstrap</p>
+                <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Go To Resource</a>
+        </div>
+        <div class="resource">
+            <h2>Tutorial Republic</h2>
+            <p>At tutorialrepublic.com you can learn the essentials of web development technologies from the basic to advanced topics, along with real life practice examples and useful references, so that you can create your own website or build career in web development.</p>
+            <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/">Go To Resource</a>
+    </div>
+    <div class="content-resources" id="tab-5">
+        <div class="resource">
+            <h2>W3 Schools</h2>
+            <p>The worlds largest developer site. W3Schools is optimized for learning, testing, and training</p>
+            <a href="https://www.w3schools.com/php/default.asp">Go To Resource</a>
+        </div>
+        <div class="resource">
+                <h2>Bootstrap</h2>
+                <p>The official Documentation for PHP</p>
+                <a href="https://www.php.net/docs.php">Go To Resource</a>
+        </div>
+        <div class="resource">
+            <h2>Tutorial Republic</h2>
+            <p>At tutorialrepublic.com you can learn the essentials of web development technologies from the basic to advanced topics, along with real life practice examples and useful references, so that you can create your own website or build career in web development.</p>
+            <a href="https://www.tutorialrepublic.com/php-tutorial/">Go To Resource</a>
+    </div>
+
 </body>
 </html>
