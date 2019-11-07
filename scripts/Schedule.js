@@ -306,7 +306,8 @@ $('.collapse').on('shown.bs.collapse', function (e) {
     }else{
       let newMonth = Month(month)
       desktop.append(newMonth)
-      return newMonth
+      newmonth = $(`.${month}`)
+      return newmonth
     }
   }
 
