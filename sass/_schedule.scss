@@ -39,8 +39,8 @@
         display: none;
     }
     .desktop{
-        display: block;
-        background-color: $bgcolor-light;
-
+      display: grid;
+      background-color: $bgcolor-light;
+      grid-template-columns: auto auto auto auto auto;
     }
   }

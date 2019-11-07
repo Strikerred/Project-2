@@ -301,7 +301,7 @@ $('.collapse').on('shown.bs.collapse', function (e) {
   }
 
   function getMonth(month){
-    if($(`.${month}`).lenght){
+    if($(`.${month}`).length){
       return $(`.${month}`).first()
     }else{
       let newMonth = Month(month)
@@ -323,7 +323,7 @@ $('.collapse').on('shown.bs.collapse', function (e) {
     }else{
       topic = ""
     }
-    if(row.lenght > 2){
+    if(row.length > 2){
       staff = row[2]
     }else {
       staff = ""
@@ -331,7 +331,7 @@ $('.collapse').on('shown.bs.collapse', function (e) {
     return `<div class="day week-${getWeek(date)} ${weekdays[date.getDay()]}">
       <h3>${date.getDate()}</h3>
       <p class="topic">${topic}</p>
-      <p class="staff">${staff}}</p>
+      <p class="staff">${staff}</p>
     </div>`;
   }
 

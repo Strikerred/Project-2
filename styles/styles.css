@@ -1,4 +1,39 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@font-face {
+  font-family: "halflings";
+  src: url("../fonts/glyphicons-halflings-regular.woff") formt("woff"); }
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?6c92x1");
+  src: url("../fonts/icomoon.eot?6c92x1#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?6c92x1") format("truetype"), url("../fonts/icomoon.woff?6c92x1") format("woff"), url("../fonts/icomoon.svg?6c92x1#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-chevron-right:before {
+  content: "\e900"; }
+
+.icon-chevron-left:before {
+  content: "\e901"; }
+
+.icon-chevron-down:before {
+  content: "\e902"; }
+
+.icon-chevron-up:before {
+  content: "\e903"; }
+
 *,
 *:before,
 *:after {
@@ -212,41 +247,6 @@ a {
   text-align: left;
   position: relative; }
 
-@font-face {
-  font-family: "halflings";
-  src: url("../fonts/glyphicons-halflings-regular.woff") formt("woff"); }
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?6c92x1");
-  src: url("../fonts/icomoon.eot?6c92x1#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?6c92x1") format("truetype"), url("../fonts/icomoon.woff?6c92x1") format("woff"), url("../fonts/icomoon.svg?6c92x1#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block; }
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-chevron-right:before {
-  content: "\e900"; }
-
-.icon-chevron-left:before {
-  content: "\e901"; }
-
-.icon-chevron-down:before {
-  content: "\e902"; }
-
-.icon-chevron-up:before {
-  content: "\e903"; }
-
 .btn:after {
   position: absolute;
   font-family: "icomoon";
@@ -268,8 +268,9 @@ a {
     display: none; }
 
   .desktop {
-    display: block;
-    background-color: white; } }
+    display: grid;
+    background-color: white;
+    grid-template-columns: auto auto auto auto auto; } }
 .courses {
   padding: 10px 20px;
   padding-bottom: 80px;
