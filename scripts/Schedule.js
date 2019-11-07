@@ -341,6 +341,7 @@ $('.collapse').on('shown.bs.collapse', function (e) {
     y = FindYear(row[0].split(" ")[0])
     let dateObj = new Date(y, m, d)
 
+    console.log(row)
     addCalendarEntry(dateObj, row)
   }
 
