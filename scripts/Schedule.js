@@ -178,6 +178,9 @@ const schedule = [
   ['May 8', 'Demo Day', 'Phil Weier']
 ]
 
+$(function() {
+  
+
 console.log(schedule[0][0].split(" ")[1]);
 
 let w = 0
@@ -232,9 +235,66 @@ $('.collapse').on('shown.bs.collapse', function (e) {
   }
 
   last = e.timeStamp
+})
 
 /*
   $(window).animate({
     scrollTop: document.body.scrollHeight
   }, 500) */
+
+
+  //Desktop
+  const desktop = $('.desktop');
+
+  function FormatMonth(month){
+    let monthMap = {
+      "Sep": 8,
+      "Oct": 9,
+      "Nov": 10,
+      "Dec": 11,
+      "Jan": 0,
+      "Feb": 1,
+      "Mar": 2,
+      "Apr": 3,
+      "May": 4,
+      "Jun": 5,
+      "Jul": 6,
+      "Aug": 7
+    }
+
+    return monthMap[month]
+  }
+
+  function FindYear(month){
+      let monthYearMap = {
+        "Sep": 2019,
+        "Oct": 2019,
+        "Nov": 2019,
+        "Dec": 2019,
+        "Jan": 2020,
+        "Feb": 2020,
+        "Mar": 2020,
+        "Apr": 2020,
+        "May": 2020,
+        "Jun": 2020,
+        "Jul": 2020,
+        "Aug": 2020
+      }
+
+      return monthYearMap[month]
+  }
+
+  function addCalendarEntry(dateObj, row){
+    
+  }
+
+  for(let row of schedule){
+    m = FormatMonth(row[0].split(" ")[0])
+    d = row[0].split(" ")[1]
+    y = FindYear(row[0].split(" ")[0])
+    let dateObj = new Date(y, m, d)
+
+    addCalendarEntry(dateObj, row)
+  }
+
 })
