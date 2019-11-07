@@ -37,6 +37,7 @@ header.resources li{
 }
 
 .resource p {
+    text-align: center;
     padding: 10px;
 }
 
@@ -49,8 +50,7 @@ header.resources li{
 }
 
 .content-resources .resource a {
-    display: inline-block;
-    width: 100%;
+    display: block;
     line-height: 3em;
     background-color: $red;
     color: $textcolor-light;
@@ -60,21 +60,24 @@ header.resources li{
 
 @include mq($largeTablet){
     .content-resources{
-        visibility: hidden;
+        display: none;
+        
+    }
+
+    .content-resources.current{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
-    .content-resources.current{
-        visibility: visible;
-    }
-
     .resource {
-        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        max-width: 250px;
+        height: 450px;
 
         p{
-            height: 69%;
+            height: 100%;
             text-align: center;
         }
 
