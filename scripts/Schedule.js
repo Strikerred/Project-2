@@ -171,6 +171,7 @@ const schedule = [
   ['Apr 28', 'Industry Projects', 'Phil Weier'],
   ['Apr 29', 'Industry Projects', 'Phil Weier'],
   ['Apr 30', 'Industry Projects', 'Phil Weier'],
+  [],
   ['May 4', 'Industry Projects', 'Phil Weier'],
   ['May 5', 'Industry Projects', 'Phil Weier'],
   ['May 6', 'Industry Projects', 'Phil Weier'],
@@ -197,13 +198,13 @@ for (i in schedule) {
     p1.appendChild(txt1)
     week.appendChild(p1)
   }
-  if (schedule[i][1]) {
+  if (schedule[i].length > 1) {
     const p2 = document.createElement('p')
     const txt2 = document.createTextNode(schedule[i][1])
     p2.appendChild(txt2)
     week.appendChild(p2)
   }
-  if (schedule[i][2]) {
+  if (schedule[i].length > 2) {
     const p3 = document.createElement('p')
     const txt3 = document.createTextNode(schedule[i][2])
     p3.appendChild(txt3)
@@ -314,6 +315,11 @@ $('.collapse').on('shown.bs.collapse', function (e) {
   function Month(month) {
     return `<div class="month ${month}">
       <h2>${month}</h2>
+      <h3 class="Monday">Monday</h3>
+      <h3 class="Tuesday">Tuesday</h3>
+      <h3 class="Wednesday">Wednesday</h3>
+      <h3 class="Thursday">Thursday</h3>
+      <h3 class="Friday">Friday</h3>
     </div>`;
   }
   

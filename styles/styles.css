@@ -268,9 +268,31 @@ a {
     display: none; }
 
   .desktop {
+    background-color: white; }
+
+  .month {
     display: grid;
-    background-color: white;
-    grid-template-columns: auto auto auto auto auto; } }
+    grid-template-columns: auto auto auto auto auto;
+    padding: 20px; }
+
+  h2 {
+    grid-column: 1/ 6;
+    padding: 30px 0; }
+
+  .Monday {
+    grid-column: 1/2; }
+
+  .Tuesday {
+    grid-column: 2/3; }
+
+  .Wednesday {
+    grid-column: 3/4; }
+
+  .Thursday {
+    grid-column: 4/5; }
+
+  .Friday {
+    grid-column: 5/6; } }
 .courses {
   padding: 10px 20px;
   padding-bottom: 80px;
