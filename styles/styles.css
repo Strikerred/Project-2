@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+img {
+  height: auto; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure, article, p, h1, h2,
+h3, button, img, a, article,
+section, main, footer, ul, li {
+  margin: 0;
+  border: none;
+  background: none;
+  list-style: none;
+  text-decoration: none; }
+
 header {
   display: flex;
   flex-direction: column;
@@ -12,17 +33,19 @@ header {
     margin: auto 0; }
   header .student {
     width: 100%; }
-  header .instructor {
-    display: block;
-    height: 100%;
-    object-fit: cover; }
   header .instructors {
-    display: none; }
+    display: none;
+    width: 100%; }
   header .instructors.current {
     display: flex;
     justify-content: center;
-    flex: 1;
-    width: 100%; }
+    max-width: 100%;
+    height: 100%; }
+    header .instructors.current .instructor {
+      display: block;
+      width: 50%;
+      height: auto;
+      object-fit: cover; }
   header .toggle-feed {
     display: flex;
     justify-content: space-around;
@@ -41,10 +64,12 @@ header {
       font-size: 1.5em;
       font-family: Arial, Helvetica, sans-serif;
       cursor: pointer; }
-  @media (min-width: 760px) {
+
+@media (min-width: 760px) {
+  header {
+    height: 200px; }
     header .toggle-feed {
       display: none; } }
-
 nav {
   position: fixed;
   bottom: 0;
@@ -84,15 +109,167 @@ nav {
 
 @media (min-width: 760px) {
   nav {
-    display: block;
+    padding: 25px 20px 0;
+    display: flex;
+    justify-content: flex-end;
     position: relative;
-    top: 0; }
-    nav li {
-      float: right; }
+    margin-bottom: 25px; }
+    nav ul {
+      text-align: center;
+      width: 60%; }
+      nav ul li {
+        display: block;
+        width: 100%; }
+        nav ul li a {
+          position: relative;
+          display: block;
+          width: 100%;
+          padding: 20px 0;
+          font-family: Arial, Helvetica, sans-serif; }
     nav img {
-      display: none; }
-    nav a {
-      padding: 0; } }
+      display: none; } }
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 3px 0;
+  line-height: 1.4; }
+
+body {
+  background-color: black;
+  height: 90vh;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.content.current {
+  display: inherit; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+.content {
+  margin: 0;
+  display: none;
+  background-color: white;
+  padding: 20px 20px 90px;
+  font-family: "Roboto", sans-serif; }
+  .content ul {
+    padding: 0 20px; }
+  .content a {
+    color: #2828cf;
+    font-weight: bold; }
+  .content .button {
+    text-align: center; }
+  .content #apply-button {
+    color: white;
+    background-color: #E53F23;
+    padding: 10px; }
+  .content .row {
+    display: flex;
+    flex-direction: column;
+    max-width: 445px; }
+  .content .info {
+    display: flex;
+    background-color: #E7E2E1;
+    padding: 15px 10px 5px;
+    justify-content: center;
+    align-items: flex-end; }
+    .content .info img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%; }
+    .content .info .contact {
+      display: block;
+      width: 100%;
+      padding-left: 15px;
+      font-size: 0.8em; }
+  .content .social-media {
+    display: flex;
+    background-color: #E7E2E1;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted black;
+    justify-content: flex-end;
+    padding: 0 20px 5px 0; }
+
+@media (min-width: 760px) {
+  .content {
+    display: block;
+    color: white;
+    background-color: black; }
+
+  .content.current {
+    padding-bottom: 0px; } }
+.month {
+  background-color: #E53F23;
+  color: white;
+  border: none; }
+
+#outerAccordion {
+  padding: 10px 0 70px; }
+
+.btn {
+  width: 100vw;
+  text-align: left;
+  position: relative; }
+
+@font-face {
+  font-family: "halflings";
+  src: url("../fonts/glyphicons-halflings-regular.woff") formt("woff"); }
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?6c92x1");
+  src: url("../fonts/icomoon.eot?6c92x1#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?6c92x1") format("truetype"), url("../fonts/icomoon.woff?6c92x1") format("woff"), url("../fonts/icomoon.svg?6c92x1#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-chevron-right:before {
+  content: "\e900"; }
+
+.icon-chevron-left:before {
+  content: "\e901"; }
+
+.icon-chevron-down:before {
+  content: "\e902"; }
+
+.icon-chevron-up:before {
+  content: "\e903"; }
+
+.btn:after {
+  position: absolute;
+  font-family: "icomoon";
+  content: "\e903";
+  color: black;
+  left: 80vw;
+  margin-left: 15px;
+  z-index: 2; }
+
+.month:after {
+  color: white; }
+
+/* Icon when the collapsible content is hidden */
+.btn.collapsed:after {
+  content: "\e902"; }
+
+@media (min-width: 760px) {
+  .mobile {
+    display: none; }
+
+  .desktop {
+    display: block;
+    background-color: white; } }
 .courses {
   padding: 10px 20px;
   padding-bottom: 80px;
@@ -127,7 +304,9 @@ nav {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    color: white;
+    background-color: black; }
 
   .class {
     max-width: 300px;
@@ -262,9 +441,13 @@ header.resources li {
 
 @media (min-width: 760px) {
   .content-resources {
+    visibility: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; }
+
+  .content-resources.current {
+    visibility: visible; }
 
   .resource {
     max-width: 300px; }
@@ -273,156 +456,5 @@ header.resources li {
       text-align: center; }
     .resource h2 {
       text-align: center; } }
-.month {
-  background-color: #E53F23;
-  color: white;
-  border: none; }
 
-#outerAccordion {
-  padding: 10px 0 70px; }
-
-.btn {
-  width: 100vw;
-  text-align: left;
-  position: relative; }
-
-@font-face {
-  font-family: "halflings";
-  src: url("../fonts/glyphicons-halflings-regular.woff") formt("woff"); }
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?6c92x1");
-  src: url("../fonts/icomoon.eot?6c92x1#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?6c92x1") format("truetype"), url("../fonts/icomoon.woff?6c92x1") format("woff"), url("../fonts/icomoon.svg?6c92x1#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block; }
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-chevron-right:before {
-  content: "\e900"; }
-
-.icon-chevron-left:before {
-  content: "\e901"; }
-
-.icon-chevron-down:before {
-  content: "\e902"; }
-
-.icon-chevron-up:before {
-  content: "\e903"; }
-
-.btn:after {
-  position: absolute;
-  font-family: "icomoon";
-  content: "\e903";
-  color: black;
-  left: 80vw;
-  margin-left: 15px;
-  z-index: 2; }
-
-.month:after {
-  color: white; }
-
-/* Icon when the collapsible content is hidden */
-.btn.collapsed:after {
-  content: "\e902"; }
-
-@media (min-width: 760px) {
-  .mobile {
-    display: none; }
-
-  .desktop {
-    display: block; } }
-h1, h2, h3, h4, p {
-  margin: 0;
-  padding: 3px 0;
-  line-height: 1.4; }
-
-img {
-  height: auto; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  margin: 0;
-  background-color: black;
-  height: 90vh; }
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box; }
-
-.content.current {
-  display: inherit; }
-
-a {
-  color: white;
-  text-decoration: none; }
-
-.content {
-  margin: 0;
-  display: none;
-  background-color: white;
-  padding: 20px 20px 90px;
-  font-family: "Roboto", sans-serif; }
-  .content ul {
-    padding: 0 20px; }
-  .content a {
-    color: #2828cf;
-    font-weight: bold; }
-  .content .button {
-    text-align: center; }
-  .content #apply-button {
-    margin: 0;
-    color: white;
-    background-color: #E53F23;
-    padding: 10px; }
-  .content .row {
-    display: flex;
-    flex-direction: column;
-    max-width: 445px; }
-  .content .info {
-    display: flex;
-    background-color: #E7E2E1;
-    padding: 15px 10px 5px;
-    justify-content: center;
-    align-items: flex-end; }
-    .content .info img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%; }
-    .content .info .contact {
-      display: block;
-      width: 100%;
-      padding-left: 15px;
-      font-size: 0.8em; }
-  .content .social-media {
-    display: flex;
-    background-color: #E7E2E1;
-    margin-bottom: 10px;
-    border-bottom: 1px dotted black;
-    justify-content: flex-end;
-    padding: 0 20px 5px 0; }
-
-@media (min-width: 760px) {
-  .content {
-    display: block; }
-
-  .content.current {
-    padding-bottom: 0px; } }
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=styles.css.map */

@@ -60,9 +60,14 @@ header.resources li{
 
 @include mq($largeTablet){
     .content-resources{
+        visibility: hidden;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+    .content-resources.current{
+        visibility: visible;
     }
 
     .resource {

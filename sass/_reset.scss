@@ -1,0 +1,23 @@
+//resets
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+//image reset
+img{
+    height:auto;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+body, figure, article, p, h1, h2, 
+h3, button, img, a, article, 
+section, main, footer, ul, li{
+    margin:0;
+    border: none;
+    background: none;
+    list-style: none;
+    text-decoration: none;
+}

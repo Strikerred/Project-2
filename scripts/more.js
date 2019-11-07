@@ -26,3 +26,13 @@ $('div.toggle-feed a').click(function(){
     $("#"+tab_id).addClass('current');
     $("#"+tab_id+1).addClass('current');
 })
+
+$('ul.toggle-feed li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.toggle-feed li').removeClass('current');
+    $('.content-resources').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+})
