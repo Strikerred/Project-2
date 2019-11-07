@@ -4,6 +4,10 @@
     border: none;
 }
 
+.desktop{
+  display: none;
+}
+
 #outerAccordion {
     padding: 10px 0 70px;
 }
@@ -39,9 +43,8 @@
         display: none;
     }
     .desktop{
-      
+      display: block;
       background-color: $bgcolor-light;
-      
     }
 
     .month{

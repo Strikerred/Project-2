@@ -171,7 +171,7 @@ const schedule = [
   ['Apr 28', 'Industry Projects', 'Phil Weier'],
   ['Apr 29', 'Industry Projects', 'Phil Weier'],
   ['Apr 30', 'Industry Projects', 'Phil Weier'],
-  [],
+  ['May 1', 'Industry Projects', 'Phil Weier'],
   ['May 4', 'Industry Projects', 'Phil Weier'],
   ['May 5', 'Industry Projects', 'Phil Weier'],
   ['May 6', 'Industry Projects', 'Phil Weier'],
@@ -187,30 +187,36 @@ console.log(schedule[0][0].split(" ")[1]);
 let w = 0
 for (i in schedule) {
   const d = parseInt(i) % 5
+ 
   if (d == 0) {
     w++
     var week = document.getElementById('week' + w)
   }
+  if(schedule[i][0] == 'May 4'){
+    console.log(d);
+    console.log(week)
+  }
 
-  if (schedule[i].length >= 1) {
+  if (schedule[i].length >= 1 && week != null) {
     const p1 = document.createElement('p')
     const txt1 = document.createTextNode(schedule[i][0])
     p1.appendChild(txt1)
+    console.log(p1);
     week.appendChild(p1)
   }
-  if (schedule[i].length > 1) {
+  if (schedule[i].length > 1 && week != null) {
     const p2 = document.createElement('p')
     const txt2 = document.createTextNode(schedule[i][1])
     p2.appendChild(txt2)
     week.appendChild(p2)
   }
-  if (schedule[i].length > 2) {
+  if (schedule[i].length > 2 && week != null) {
     const p3 = document.createElement('p')
     const txt3 = document.createTextNode(schedule[i][2])
     p3.appendChild(txt3)
     week.appendChild(p3)
   }
-  if (d != 4) {
+  if (d != 4 && week != null) {
     week.appendChild(document.createElement('hr'))
   }
 }
