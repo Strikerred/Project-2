@@ -251,7 +251,7 @@ $('.collapse').on('shown.bs.collapse', function (e) {
 
 
   //Desktop
-  const desktop = $('.desktop');
+  const Calendar = $('.calendar');
   const monthNames = ["January", "February", "March", "April", "May", "June",  "July", "August", "September", "October", "November", "December"];
   const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
@@ -312,14 +312,14 @@ $('.collapse').on('shown.bs.collapse', function (e) {
       return $(`.${month}`).first()
     }else{
       let newMonth = Month(month)
-      desktop.append(newMonth)
+      Calendar.append(newMonth)
       newmonth = $(`.${month}`)
       return newmonth
     }
   }
 
   function Month(month) {
-    return `<div class="month ${month}">
+    return `<div class="month ${month} carousel-item">
       <h2>${month}</h2>
       <h3 class="Monday">Monday</h3>
       <h3 class="Tuesday">Tuesday</h3>
@@ -356,5 +356,7 @@ $('.collapse').on('shown.bs.collapse', function (e) {
     console.log(row)
     addCalendarEntry(dateObj, row)
   }
-
+  
+  $('.September').addClass("active")
 })
+
