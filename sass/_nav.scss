@@ -105,6 +105,10 @@ nav{
             display: none;
         }
     }   
+
+    .contact-us-btn{
+        bottom: 200px;
+    }
 }
 
 @include mq($contactLayout){

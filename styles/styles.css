@@ -187,7 +187,10 @@ nav {
           padding: 20px 0;
           font-family: Arial, Helvetica, sans-serif; }
     nav img {
-      display: none; } }
+      display: none; }
+
+  .contact-us-btn {
+    bottom: 200px; } }
 @media (min-width: 1220px) {
   .contact-us-btn {
     position: relative;
@@ -310,9 +313,13 @@ a {
   content: "\e902"; }
 
 @media (min-width: 600px) {
-  .card-body {
-    display: flex; } }
-@media (min-width: 760px) {
+  .day {
+    display: flex;
+    justify-content: space-around; } }
+@media (min-width: 930px) {
+  .day {
+    display: block; }
+
   .mobile {
     display: none; }
 

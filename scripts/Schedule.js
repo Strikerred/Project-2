@@ -181,8 +181,8 @@ const schedule = [
 $(function () {
   console.log(schedule[0][0].split(' ')[1])
 
-let w = 0
-  for (i in schedule) {
+  let w = 0
+  for (const i in schedule) {
     const d = parseInt(i) % 5
 
     if (d == 0) {
@@ -191,27 +191,31 @@ let w = 0
     }
     if (schedule[i][0] == 'May 4') {
       console.log(d)
-    console.log(week)
+      console.log(week)
     }
+
+    const day = document.createElement('div')
+    day.classList.add('day')
+    week.appendChild(day)
 
     if (schedule[i].length >= 1 && week != null) {
       const p1 = document.createElement('p')
       const txt1 = document.createTextNode(schedule[i][0])
       p1.appendChild(txt1)
       console.log(p1)
-    week.appendChild(p1)
+      day.appendChild(p1)
     }
     if (schedule[i].length > 1 && week != null) {
       const p2 = document.createElement('p')
       const txt2 = document.createTextNode(schedule[i][1])
       p2.appendChild(txt2)
-      week.appendChild(p2)
+      day.appendChild(p2)
     }
     if (schedule[i].length > 2 && week != null) {
       const p3 = document.createElement('p')
       const txt3 = document.createTextNode(schedule[i][2])
       p3.appendChild(txt3)
-      week.appendChild(p3)
+      day.appendChild(p3)
     }
     if (d != 4 && week != null) {
       week.appendChild(document.createElement('hr'))
@@ -220,15 +224,13 @@ let w = 0
 
   let last
 
-$('.collapse').on('shown.bs.collapse', function (e) {
+  $('.collapse').on('shown.bs.collapse', function (e) {
     var $btn = $(this)
     console.log(e.timeStamp)
     console.log($btn)
 
     var top = $btn.offset().top
     var bottom = $btn.offset().top + $btn.height()
-    var avg = bottom + top
-    avg *= 0.5
 
     // $('body')[0].scrollTop = $('body')[0].scrollHeight
 
@@ -253,14 +255,14 @@ $('.collapse').on('shown.bs.collapse', function (e) {
 
   function FormatMonth (month) {
     const monthMap = {
-      'Sep': 8,
-      'Oct': 9,
-      'Nov': 10,
-      'Dec': 11,
-      'Jan': 0,
-      'Feb': 1,
+      Sep: 8,
+      Oct: 9,
+      Nov: 10,
+      Dec: 11,
+      Jan: 0,
+      Feb: 1,
       Mar: 2,
-      'Apr': 3,
+      Apr: 3,
       May: 4,
       Jun: 5,
       Jul: 6,
@@ -272,18 +274,18 @@ $('.collapse').on('shown.bs.collapse', function (e) {
 
   function FindYear (month) {
     const monthYearMap = {
-      'Sep': 2019,
-      'Oct': 2019,
-      'Nov': 2019,
-      'Dec': 2019,
-      'Jan': 2020,
+      Sep: 2019,
+      Oct: 2019,
+      Nov: 2019,
+      Dec: 2019,
+      Jan: 2020,
       Feb: 2020,
       Mar: 2020,
-      'Apr': 2020,
+      Apr: 2020,
       May: 2020,
       Jun: 2020,
       Jul: 2020,
-      'Aug': 2020
+      Aug: 2020
     }
 
     return monthYearMap[month]
@@ -306,7 +308,7 @@ $('.collapse').on('shown.bs.collapse', function (e) {
   function getMonth (month) {
     if ($(`.${month}`).length) {
       return $(`.${month}`).first()
-    }else {
+    } else {
       const newMonth = Month(month)
       Calendar.append(newMonth)
       newmonth = $(`.${month}`)
@@ -330,7 +332,7 @@ $('.collapse').on('shown.bs.collapse', function (e) {
   function createDayEntry (date, row) {
     if (row.length > 1) {
       topic = row[1]
-    }else {
+    } else {
       topic = ''
     }
     if (row.length > 2) {
