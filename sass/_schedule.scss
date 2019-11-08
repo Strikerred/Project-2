@@ -38,6 +38,12 @@
     content: "\e902";
   }
 
+  @include mq($largePhone){
+    .card-body{
+      display: flex;
+    }
+  }
+
   @include mq($largeTablet){
     .mobile{
         display: none;
