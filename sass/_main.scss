@@ -6,7 +6,7 @@ h1, h2, h3, h4, p {
 
 body{
     background-color: $bgcolor-dark;
-    height: 90vh;
+    height: auto;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -24,7 +24,7 @@ a {
     margin: 0;
     display: none;
     background-color: $bgcolor-light;
-    padding: 20px 20px 90px;
+    padding: 20px 20px 125px;
     font-family: $content-font;
 
     ul {
@@ -87,11 +87,10 @@ a {
 @include mq($largeTablet){
     .content{
         display: block;
-        color: $textcolor-light;
-        background-color: $bgcolor-dark;
+        padding-bottom: 25px;
     }
 
     .content.current{
-        padding-bottom: 0px;
+        padding-bottom: 25px;
     }
   }

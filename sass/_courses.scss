@@ -8,10 +8,12 @@
 .class h2{
     margin-top: 20px;
     text-align: center;
+    font-family: "Roboto", sans-serif;
 }
 
 .class p {
     font-size: 20px;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -38,26 +40,28 @@
         max-width: 1500px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
-        color: $textcolor-light;
-        background-color: $bgcolor-dark;
     }
 
     .class{
-        max-width: 300px;
         text-align: center;
-        max-height: 350px;
+        max-width: 250px;
+        height: 450px;
+        border: 2px solid $grey;
+        margin: 20px;
 
         h2{
+            margin-top: 0;
+            padding: 10px 0;
             background-color: $red;
-            border-radius: 10px;
             color: $textcolor-light;
+            height: 80px;
         }
-        
+    
         p{
-            font-size: 0.9em;
-            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 20px;
+            font-size: 0.90em;
         }
     }
     
@@ -71,5 +75,12 @@
 
     .dots{
         display: none;
+    }
+  }
+
+  @include mq($desktopLayout){
+
+    .courses{
+        justify-content: flex-start;
     }
   }

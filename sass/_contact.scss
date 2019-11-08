@@ -7,10 +7,11 @@ input {
 }
 
 form{
-    margin: 2px 0;
+    margin: 2px auto;
     padding: 20px;
     background-color: $bgcolor-dark;
     height: 65vh;
+    max-width: 800px;
 }
 
 .text-label{

@@ -48,6 +48,33 @@ nav{
     }
 }
 
+.contact-us-btn {
+    background-color: rgb(252, 1, 1);
+    display: block;
+    padding: 8px 30px;
+    margin-left: 15px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all .2s linear;
+    border: 0;
+    box-sizing: inherit;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    position: fixed;
+    z-index: 22;
+    top: 850px;
+    right: 0;
+
+    #{$link-hover-selector} {
+        background-color: $red;
+        color: $textcolor-light;
+    }
+  }
+
 @include mq($largeTablet){
     nav{
         padding: 25px 20px 0;
@@ -77,4 +104,26 @@ nav{
             display: none;
         }
     }   
+}
+
+@include mq($contactLayout){
+    .contact-us-btn {
+        position: relative;
+        top: 0;
+        background: none;
+        padding: 20px 10px 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: $textcolor-light;
+        font-weight: lighter;
+        text-transform: none;
+        display: block;
+        margin: 0;
+
+        #{$link-hover-selector} {
+            background-color: rgba($bgcolor-light, 0.3);
+            text-decoration: none;
+            color: $textcolor-light;
+        }
+    }
 }
