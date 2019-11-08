@@ -190,7 +190,7 @@ nav {
       display: none; }
 
   .contact-us-btn {
-    bottom: 200px; } }
+    bottom: 50px; } }
 @media (min-width: 1220px) {
   .contact-us-btn {
     position: relative;
@@ -295,9 +295,6 @@ a {
   width: 100vw;
   text-align: left;
   position: relative; }
-
-.toggle-feed {
-  width: auto; }
 
 .acc-btn:after {
   position: absolute;

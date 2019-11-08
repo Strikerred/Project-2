@@ -358,6 +358,15 @@ $(function () {
   }
 
   $('.September').addClass('active')
+  let listview = false
   $('.toggle-feed').click(function () {$('.desktop').toggleClass('show')
-                                        $('.mobile').toggleClass('show')})
+                                        $('.mobile').toggleClass('show')
+                                        if(listview){
+                                          listview = false
+                                          $('.toggle-feed').text('List View')
+                                        }else {
+                                          $('.toggle-feed').text('Calendar View')
+                                          listview = true;
+                                        }
+                                          })
 })

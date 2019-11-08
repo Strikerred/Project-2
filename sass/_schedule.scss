@@ -18,11 +18,6 @@
   position: relative;
 }
 
-.toggle-feed {
-  width: auto;
-}
-
-
 .acc-btn:after {
     position: absolute;
     font-family: "icomoon";
@@ -63,6 +58,7 @@
 
     .day{
       display: block;
+      // border: 2px solid $textcolor-light;
     }
 
     .mobile{
