@@ -16,6 +16,10 @@ header {
         width: 100%;
     }
 
+    .desktop-h{
+        display: none;
+    }
+
     .instructors{
         display: none;
         width: 100%;
@@ -66,6 +70,14 @@ header {
             height: 200px;
 
             .toggle-feed{
+                display: none;
+            }
+
+            .desktop-h{
+                display: block;
+            }
+
+            #tab-11, #tab-21{
                 display: none;
             }
         }        
