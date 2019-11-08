@@ -1,4 +1,4 @@
-.month{
+.month-mobile{
     background-color: $red;
     color: $textcolor-light;
     border: none;
@@ -12,7 +12,7 @@
     padding: 10px 0 70px;
 }
 
-.acc-acc-btn {
+.acc-btn {
   width: 100vw;
   text-align: left;
   position: relative;
@@ -33,11 +33,11 @@
     z-index: 2;
   }
 
-  .month:after{
+  .month-mobile:after{
       color: $textcolor-light;
   }
 
-  .toggle-feed:after{
+  .toggle-feed{
     display:none;
   }
   /* Icon when the collapsible content is hidden */
@@ -45,6 +45,8 @@
   .acc-btn.collapsed:after {
     content: "\e902";
   }
+
+
 
   @include mq($largePhone){
     .day{
@@ -54,6 +56,11 @@
   }
 
   @include mq($desktopLayout){
+    .toggle-feed{
+      margin: 20px;
+      display: block;
+    }
+
     .day{
       display: block;
     }
@@ -62,10 +69,12 @@
         display: none;
     }
     .desktop{
-      display: block;
-      background-color: $bgcolor-light;
+      display: none;
     }
 
+    .show{
+      display: block;
+    }
 
 
     .carousel-item{
@@ -77,6 +86,7 @@
       grid-template-columns: auto auto auto auto auto;
       padding: 20px 120px;
       margin-bottom: auto;
+      color: $textcolor-light;
     }
 
     .active h2{

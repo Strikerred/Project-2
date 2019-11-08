@@ -358,4 +358,6 @@ $(function () {
   }
 
   $('.September').addClass('active')
+  $('.toggle-feed').click(function () {$('.desktop').toggleClass('show')
+                                        $('.mobile').toggleClass('show')})
 })

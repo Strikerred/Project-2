@@ -280,7 +280,7 @@ a {
 
   .content.current {
     padding-bottom: 25px; } }
-.month {
+.month-mobile {
   background-color: #E53F23;
   color: white;
   border: none; }
@@ -291,12 +291,15 @@ a {
 #outerAccordion {
   padding: 10px 0 70px; }
 
-.btn {
+.acc-btn {
   width: 100vw;
   text-align: left;
   position: relative; }
 
-.btn:after {
+.toggle-feed {
+  width: auto; }
+
+.acc-btn:after {
   position: absolute;
   font-family: "icomoon";
   content: "\e903";
@@ -305,11 +308,14 @@ a {
   margin-left: 15px;
   z-index: 2; }
 
-.month:after {
+.month-mobile:after {
   color: white; }
 
+.toggle-feed {
+  display: none; }
+
 /* Icon when the collapsible content is hidden */
-.btn.collapsed:after {
+.acc-btn.collapsed:after {
   content: "\e902"; }
 
 @media (min-width: 600px) {
@@ -317,6 +323,10 @@ a {
     display: flex;
     justify-content: space-around; } }
 @media (min-width: 930px) {
+  .toggle-feed {
+    margin: 20px;
+    display: block; }
+
   .day {
     display: block; }
 
@@ -324,8 +334,10 @@ a {
     display: none; }
 
   .desktop {
-    display: block;
-    background-color: white; }
+    display: none; }
+
+  .show {
+    display: block; }
 
   .carousel-item {
     background-color: #E53F23; }
@@ -334,7 +346,8 @@ a {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     padding: 20px 120px;
-    margin-bottom: auto; }
+    margin-bottom: auto;
+    color: white; }
 
   .active h2 {
     grid-column: 1/ 6;
