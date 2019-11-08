@@ -40,6 +40,8 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        color: $textcolor-light;
+        background-color: $bgcolor-dark;
     }
 
     .class{
