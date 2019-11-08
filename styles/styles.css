@@ -160,7 +160,7 @@ nav {
   font-weight: bold;
   position: fixed;
   z-index: 22;
-  top: 850px;
+  bottom: 300px;
   right: 0; }
   .contact-us-btn:hover, .contact-us-btn:focus, .contact-us-btn:active {
     background-color: #E53F23;

@@ -161,7 +161,6 @@ const schedule = [
   ['Apr 15', 'Industry Projects', 'Phil Weier'],
   ['Apr 16', 'Industry Projects', 'Phil Weier'],
   ['Apr 17', 'Industry Projects', 'Phil Weier'],
-  ['Apr 18', 'Industry Projects', 'Phil Weier'],
   ['Apr 20', 'Industry Projects', 'Phil Weier'],
   ['Apr 21', 'Industry Projects', 'Phil Weier'],
   ['Apr 22', 'Industry Projects', 'Phil Weier'],
@@ -179,146 +178,143 @@ const schedule = [
   ['May 8', 'Demo Day', 'Phil Weier']
 ]
 
-$(function() {
-  
-
-console.log(schedule[0][0].split(" ")[1]);
+$(function () {
+  console.log(schedule[0][0].split(' ')[1])
 
 let w = 0
-for (i in schedule) {
-  const d = parseInt(i) % 5
- 
-  if (d == 0) {
-    w++
-    var week = document.getElementById('week' + w)
-  }
-  if(schedule[i][0] == 'May 4'){
-    console.log(d);
+  for (i in schedule) {
+    const d = parseInt(i) % 5
+
+    if (d == 0) {
+      w++
+      var week = document.getElementById('week' + w)
+    }
+    if (schedule[i][0] == 'May 4') {
+      console.log(d)
     console.log(week)
-  }
+    }
 
-  if (schedule[i].length >= 1 && week != null) {
-    const p1 = document.createElement('p')
-    const txt1 = document.createTextNode(schedule[i][0])
-    p1.appendChild(txt1)
-    console.log(p1);
+    if (schedule[i].length >= 1 && week != null) {
+      const p1 = document.createElement('p')
+      const txt1 = document.createTextNode(schedule[i][0])
+      p1.appendChild(txt1)
+      console.log(p1)
     week.appendChild(p1)
+    }
+    if (schedule[i].length > 1 && week != null) {
+      const p2 = document.createElement('p')
+      const txt2 = document.createTextNode(schedule[i][1])
+      p2.appendChild(txt2)
+      week.appendChild(p2)
+    }
+    if (schedule[i].length > 2 && week != null) {
+      const p3 = document.createElement('p')
+      const txt3 = document.createTextNode(schedule[i][2])
+      p3.appendChild(txt3)
+      week.appendChild(p3)
+    }
+    if (d != 4 && week != null) {
+      week.appendChild(document.createElement('hr'))
+    }
   }
-  if (schedule[i].length > 1 && week != null) {
-    const p2 = document.createElement('p')
-    const txt2 = document.createTextNode(schedule[i][1])
-    p2.appendChild(txt2)
-    week.appendChild(p2)
-  }
-  if (schedule[i].length > 2 && week != null) {
-    const p3 = document.createElement('p')
-    const txt3 = document.createTextNode(schedule[i][2])
-    p3.appendChild(txt3)
-    week.appendChild(p3)
-  }
-  if (d != 4 && week != null) {
-    week.appendChild(document.createElement('hr'))
-  }
-}
 
-let last;
+  let last
 
 $('.collapse').on('shown.bs.collapse', function (e) {
-  var $btn = $(this)
-  console.log(e.timeStamp)
-  console.log($btn)
+    var $btn = $(this)
+    console.log(e.timeStamp)
+    console.log($btn)
 
-  var top = $btn.offset().top
-  var bottom = $btn.offset().top + $btn.height()
-  var avg = bottom + top
-  avg *= .5
+    var top = $btn.offset().top
+    var bottom = $btn.offset().top + $btn.height()
+    var avg = bottom + top
+    avg *= 0.5
 
-  // $('body')[0].scrollTop = $('body')[0].scrollHeight
+    // $('body')[0].scrollTop = $('body')[0].scrollHeight
 
-  if (bottom > 500 && e.timeStamp != last) {
-    $('html, body').animate({
-      scrollTop: top - 20
-    }, 500)
-  }
+    if (bottom > 500 && e.timeStamp != last) {
+      $('html, body').animate({
+        scrollTop: top - 20
+      }, 500)
+    }
 
-  last = e.timeStamp
-})
+    last = e.timeStamp
+  })
 
-/*
+  /*
   $(window).animate({
     scrollTop: document.body.scrollHeight
   }, 500) */
 
+  // Desktop
+  const Calendar = $('.calendar')
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 
-  //Desktop
-  const Calendar = $('.calendar');
-  const monthNames = ["January", "February", "March", "April", "May", "June",  "July", "August", "September", "October", "November", "December"];
-  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-
-  function FormatMonth(month){
-    let monthMap = {
-      "Sep": 8,
-      "Oct": 9,
-      "Nov": 10,
-      "Dec": 11,
-      "Jan": 0,
-      "Feb": 1,
-      "Mar": 2,
-      "Apr": 3,
-      "May": 4,
-      "Jun": 5,
-      "Jul": 6,
-      "Aug": 7
+  function FormatMonth (month) {
+    const monthMap = {
+      'Sep': 8,
+      'Oct': 9,
+      'Nov': 10,
+      'Dec': 11,
+      'Jan': 0,
+      'Feb': 1,
+      Mar: 2,
+      'Apr': 3,
+      May: 4,
+      Jun: 5,
+      Jul: 6,
+      Aug: 7
     }
 
     return monthMap[month]
   }
 
-  function FindYear(month){
-      let monthYearMap = {
-        "Sep": 2019,
-        "Oct": 2019,
-        "Nov": 2019,
-        "Dec": 2019,
-        "Jan": 2020,
-        "Feb": 2020,
-        "Mar": 2020,
-        "Apr": 2020,
-        "May": 2020,
-        "Jun": 2020,
-        "Jul": 2020,
-        "Aug": 2020
-      }
+  function FindYear (month) {
+    const monthYearMap = {
+      'Sep': 2019,
+      'Oct': 2019,
+      'Nov': 2019,
+      'Dec': 2019,
+      'Jan': 2020,
+      Feb: 2020,
+      Mar: 2020,
+      'Apr': 2020,
+      May: 2020,
+      Jun: 2020,
+      Jul: 2020,
+      'Aug': 2020
+    }
 
-      return monthYearMap[month]
+    return monthYearMap[month]
   }
 
-  function getWeek(date){
+  function getWeek (date) {
     d = date.getDate()
     day = date.getDay()
-    week = Math.ceil((d-day)/7);
-    return week;
+    week = Math.ceil((d - day) / 7)
+    return week
   }
 
-  function addCalendarEntry(dateObj, row){
-    let monthname = monthNames[dateObj.getMonth()]
-    let month = getMonth(monthname)
-    let entry = createDayEntry(dateObj, row)
-    month.children(".month").append(entry)
+  function addCalendarEntry (dateObj, row) {
+    const monthname = monthNames[dateObj.getMonth()]
+    const month = getMonth(monthname)
+    const entry = createDayEntry(dateObj, row)
+    month.children('.month').append(entry)
   }
 
-  function getMonth(month){
-    if($(`.${month}`).length){
+  function getMonth (month) {
+    if ($(`.${month}`).length) {
       return $(`.${month}`).first()
-    }else{
-      let newMonth = Month(month)
+    }else {
+      const newMonth = Month(month)
       Calendar.append(newMonth)
       newmonth = $(`.${month}`)
       return newmonth
     }
   }
 
-  function Month(month) {
+  function Month (month) {
     return `<div class="${month} carousel-item">
     <div class="month ${month} ">
       <h2>${month}</h2>
@@ -328,37 +324,36 @@ $('.collapse').on('shown.bs.collapse', function (e) {
       <h3 class="Thursday">Thursday</h3>
       <h3 class="Friday">Friday</h3>
     </div>
-    </div>`;
+    </div>`
   }
-  
-  function createDayEntry(date, row) {
-    if(row.length > 1){
+
+  function createDayEntry (date, row) {
+    if (row.length > 1) {
       topic = row[1]
-    }else{
-      topic = ""
-    }
-    if(row.length > 2){
-      staff = row[2]
     }else {
-      staff = ""
+      topic = ''
+    }
+    if (row.length > 2) {
+      staff = row[2]
+    } else {
+      staff = ''
     }
     return `<div class="day week-${getWeek(date)} ${weekdays[date.getDay()]}">
       <h3>${date.getDate()}</h3>
       <p class="topic">${topic}</p>
       <p class="staff">${staff}</p>
-    </div>`;
+    </div>`
   }
 
-  for(let row of schedule){
-    m = FormatMonth(row[0].split(" ")[0])
-    d = row[0].split(" ")[1]
-    y = FindYear(row[0].split(" ")[0])
-    let dateObj = new Date(y, m, d)
+  for (const row of schedule) {
+    m = FormatMonth(row[0].split(' ')[0])
+    d = row[0].split(' ')[1]
+    y = FindYear(row[0].split(' ')[0])
+    const dateObj = new Date(y, m, d)
 
     console.log(row)
     addCalendarEntry(dateObj, row)
   }
-  
-  $('.September').addClass("active")
-})
 
+  $('.September').addClass('active')
+})
