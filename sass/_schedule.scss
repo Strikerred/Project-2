@@ -12,14 +12,18 @@
     padding: 10px 0 70px;
 }
 
-.btn {
+.acc-acc-btn {
   width: 100vw;
   text-align: left;
   position: relative;
 }
 
+.toggle-feed {
+  width: auto;
+}
 
-.btn:after {
+
+.acc-btn:after {
     position: absolute;
     font-family: "icomoon";
     content: "\e903";
@@ -32,9 +36,13 @@
   .month:after{
       color: $textcolor-light;
   }
+
+  .toggle-feed:after{
+    display:none;
+  }
   /* Icon when the collapsible content is hidden */
   
-  .btn.collapsed:after {
+  .acc-btn.collapsed:after {
     content: "\e902";
   }
 
