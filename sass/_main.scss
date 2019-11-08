@@ -45,43 +45,6 @@ a {
         background-color: $red;
         padding: 10px;
     }
-
-    .row{
-        display: flex;
-        flex-direction: column;
-        max-width: 445px;
-    }
-
-    .info{
-        display: flex;
-        background-color: $grey;
-        padding: 15px 10px 5px;
-        justify-content: center;
-        align-items: flex-end;
-
-        img{
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .contact{
-            display: block;
-            width: 100%;
-            padding-left: 15px;
-            font-size: 0.8em;
-        }
-    }
-
-    .social-media{
-        display: flex;
-        background-color: $grey;
-        margin-bottom: 10px;
-        border-bottom: 1px dotted black;
-        justify-content: flex-end;
-        padding: 0 20px 5px 0;
-    }
 }
 
 @include mq($largeTablet){

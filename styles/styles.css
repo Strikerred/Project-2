@@ -68,6 +68,8 @@ header {
     margin: auto 0; }
   header .student {
     width: 100%; }
+  header .desktop-h {
+    display: none; }
   header .instructors {
     display: none;
     width: 100%; }
@@ -104,6 +106,10 @@ header {
   header {
     height: 200px; }
     header .toggle-feed {
+      display: none; }
+    header .desktop-h {
+      display: block; }
+    header #tab-11, header #tab-21 {
       display: none; } }
 nav {
   position: fixed;
@@ -246,33 +252,6 @@ a {
     color: white;
     background-color: #E53F23;
     padding: 10px; }
-  .content .row {
-    display: flex;
-    flex-direction: column;
-    max-width: 445px; }
-  .content .info {
-    display: flex;
-    background-color: #E7E2E1;
-    padding: 15px 10px 5px;
-    justify-content: center;
-    align-items: flex-end; }
-    .content .info img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%; }
-    .content .info .contact {
-      display: block;
-      width: 100%;
-      padding-left: 15px;
-      font-size: 0.8em; }
-  .content .social-media {
-    display: flex;
-    background-color: #E7E2E1;
-    margin-bottom: 10px;
-    border-bottom: 1px dotted black;
-    justify-content: flex-end;
-    padding: 0 20px 5px 0; }
 
 @media (min-width: 760px) {
   .content {
@@ -434,6 +413,49 @@ a {
 @media (min-width: 930px) {
   .courses {
     justify-content: flex-start; } }
+.content .row {
+  display: flex;
+  flex-direction: column;
+  max-width: 445px; }
+.content .info {
+  display: flex;
+  background-color: #E7E2E1;
+  padding: 15px 10px 5px;
+  justify-content: center;
+  align-items: center; }
+  .content .info img {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%; }
+  .content .info .contact {
+    display: block;
+    width: 100%;
+    padding-left: 15px;
+    font-size: 0.8em; }
+.content .social-media {
+  display: flex;
+  background-color: #E7E2E1;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted black;
+  justify-content: flex-end;
+  padding: 0 20px 5px 0; }
+
+@media (min-width: 760px) {
+  .container {
+    display: flex;
+    justify-content: center; }
+    .container .content.current {
+      display: block;
+      width: 100%; }
+    .container .content {
+      width: 100%; }
+    .container .row {
+      width: 100%; }
+      .container .row .contact {
+        height: 125px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; } }
 input {
   margin: 10px 0; }
 
