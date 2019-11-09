@@ -6,11 +6,7 @@ header.resources{
 }
 
 header.resources ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
+    display: none;
 }
 
 header.resources li{
@@ -26,9 +22,20 @@ header.resources li{
     }
 }
 
+#tab-1{
+    padding-top: 30px;
+}
+
+#tab-5{
+    padding-bottom: 30px;
+}
+
 .resource {
     border: 2px solid $grey;
-    margin: 20px
+    
+    &:nth-child(2){
+        margin: 20px 0;
+    }
 }
 
 .resource h2 {
@@ -45,8 +52,12 @@ header.resources li{
     margin: 0;
     display: block;
     background-color: $bgcolor-light;
-    padding: 20px 20px 90px;
+    padding: 10px;
     font-family: $content-font;
+
+    &:first-child{
+        margin-top: 20px;
+    }
 }
 
 .content-resources .resource a {
@@ -59,9 +70,25 @@ header.resources li{
 }
 
 @include mq($largeTablet){
+
+    header.resources ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    #tab-2, #tab-3, #tab-4, #tab-5{
+        padding-top: 30px;
+    }
+
+    #tab-1, #tab-2, #tab-3, #tab-4{
+        padding-bottom: 30px;
+    }
+    
     .content-resources{
-        display: none;
-        
+        display: none;     
     }
 
     .content-resources.current{
@@ -75,6 +102,10 @@ header.resources li{
         flex-direction: column;
         max-width: 250px;
         height: 450px;
+
+        &:nth-child(2){
+            margin: 0;
+        }
 
         p{
             height: 100%;
